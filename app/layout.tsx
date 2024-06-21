@@ -25,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cooperhHewitt.className}>{children}</body>
+    <head>
+      <title>Corazon Hawaii</title>
+      <meta name="google-site-verification" content="OXlS6M5sLe21LXthyznm35mZ9Nihl--hMyEdqzr9Z74"/>
+    </head>
+    <body className={cooperhHewitt.className}>{children}</body>
     </html>
   );
 }
