@@ -7,20 +7,28 @@ import Gallery from "../components/Gallery";
 import Banner from "../assets/images/heroBackground.jpg";
 import Parallax from "../components/Parrallax/Parallax";
 import ContactForm from "../components/ContactForm";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <MenuHeader />
       <HeroSection />
-      <span className="flex justify-content-center text-4xl font-bold py-12">
-        Lorem ipsum dolor sit amet.
-      </span>
+      <div data-aos="fade-up">
+        <span className="flex justify-content-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold py-12">
+          ABOUT US
+        </span>
+      </div>
       <AboutUs />
-      <div className="mt-24">
+      <div data-aos="fade-left" className="mt-24">
         <History />
       </div>
-      <div className="mt-24 px-12">
+      <div data-aos="fade-up" className="mt-24 px-12">
         <Gallery />
       </div>
       <div className="mt-24">
