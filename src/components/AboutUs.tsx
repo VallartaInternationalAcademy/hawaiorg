@@ -6,7 +6,7 @@ import InfoCard from "./Cards/InfoCard";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-row justify-between px-12">
+    <div className="flex flex-col md:flex-row justify-content-center gap-12 px-4">
       <InfoCard
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cum perferendis eligendi harum perspiciatis ipsum ut maxime. Velit consequatur, aspernatur illum alias eos ipsum doloremque?"
         image={CardImage}
