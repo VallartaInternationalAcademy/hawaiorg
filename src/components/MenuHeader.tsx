@@ -12,7 +12,7 @@ const MenuHeader = () => {
       </div>
       <div className="flex-none lg:hidden">
         <div className="dropdown dropdown-end">
-          <label tabIndex="0" className="btn btn-ghost btn-square">
+          <label tabIndex={0} className="btn btn-ghost btn-square">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -29,7 +29,7 @@ const MenuHeader = () => {
             </svg>
           </label>
           <ul
-            tabIndex="0"
+            tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
