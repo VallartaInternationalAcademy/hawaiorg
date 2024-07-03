@@ -2,18 +2,21 @@ import banner from "../assets/images/banner.png";
 
 const History = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center text-center">
-      <div className="my-auto mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center text-center">
+      <div className="flex justify-center items-center">
         <img
           src={banner}
-          className="h-[50%] w-[50%] md:h-[60%] md:w-[60%] lg:h-[80%] lg:w-[80%] pl-0 md:pl-8 lg:pl-32"
+          className="h-[60%] w-[60%] md:h-[70%] md:w-[70%] lg:h-[90%] lg:w-[90%] pl-0 md:pl-8 lg:pl-32"
         />
       </div>
-      <div className="px-4 md:px-12 lg:pr-24 text-sm md:text-lg lg:text-xl row">
-        <span className="text-2xl md:text-3xl lg:text-4xl text-center font-bold block mb-4">
+      <div
+        className="px-4 md:px-12 lg:pr-24 text-sm md:text-lg lg:text-xl"
+        style={{ marginRight: "80px" }}
+      >
+        <span className="text-2xl md:text-3xl lg:text-4xl font-bold block mb-4 uppercase">
           Lorem ipsum dolor sit.
         </span>
-        <span className="block mb-4">
+        <span className="block mb-4 text-justify">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
           eligendi voluptatum? Distinctio facere blanditiis fuga vitae ut magni
           temporibus eveniet culpa corrupti aspernatur voluptate praesentium
@@ -30,7 +33,7 @@ const History = () => {
           iste pariatur. Reiciendis necessitatibus ut hic, incidunt facere autem
           magnam perferendis voluptatibus itaque mollitia temporibus aperiam id
           laborum sit nam! Exercitationem, mollitia non? Iste corporis
-          laboriosam amet architecto hic sequi fuga vel provident tempora at
+          laboriosam amet architecto hic sequi fuga vel provident tempora at.
         </span>
         <span className="flex justify-center mt-4">
           <button

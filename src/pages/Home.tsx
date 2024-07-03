@@ -10,6 +10,7 @@ import ContactForm from "../components/ContactForm";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
+import Selction4 from "../components/Section4";
 
 const Home = () => {
   useEffect(() => {
@@ -30,6 +31,9 @@ const Home = () => {
       </div>
       <div data-aos="fade-up" className="mt-24 px-12">
         <Gallery />
+      </div>
+      <div data-aos="fade-down-right" className="mt-24">
+        <Selction4 />
       </div>
       <div className="mt-24">
         <Parallax
