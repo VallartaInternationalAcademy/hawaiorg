@@ -2,12 +2,12 @@ import icon from "../assets/images/icon.png";
 
 const MenuHeader = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky-header">
       <div className="flex-1">
         <img
           src={icon}
           alt="Logo"
-          className="h-12 sm:h-12 md:h-[2rem] lg:h-[2rem] xl:h-[4rem]"
+          className="h-6 sm:h-12 md:h-[2rem] lg:h-[2rem] xl:h-[4rem]"
         />
       </div>
       <div className="flex-none lg:hidden">
@@ -50,7 +50,7 @@ const MenuHeader = () => {
         </div>
       </div>
       <div className="hidden lg:flex flex-none">
-        <ul className="menu menu-horizontal p-0">
+        <ul className="menu menu-horizontal p-0 text-md sm:text-lg md:text-md lg:text-xl xl:text-2xl">
           <li>
             <span>HOME</span>
           </li>

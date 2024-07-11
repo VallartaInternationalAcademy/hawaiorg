@@ -22,3 +22,20 @@ body {
 a {
   text-decoration: none; 
 }
+
+.sticky-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra para mejor visualización */
+}
+
+.icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: translateX(10px);
+}

@@ -4,6 +4,10 @@ export default {
   theme: {
     colors: {
       main: "#6EBEC3",
+      azul: "#72bfc4ff",
+      verde: "#72c4a6ff",
+      rojo: "#c47272ff",
+      morado: "#8d72c4ff",
     },
     extend: {
       fontFamily: {

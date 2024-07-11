@@ -1,22 +1,18 @@
+import { IconType } from "react-icons";
+
 interface Props {
-  content: string;
-  image: string;
+  text: string;
+  Icon: IconType;
   title: string;
 }
 
-const InfoCard = ({ content, image, title }: Props) => {
+const InfoCard = ({ text, Icon, title }: Props) => {
   return (
-    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-      <img alt="" src={image} className="h-56 w-full object-cover" />
-
-      <div className="bg-white p-4 sm:p-6">
-        <h3 className="mt-0.5 text-lg text-gray-900">{title}</h3>
-
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-          {content}
-        </p>
-      </div>
-    </article>
+    <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg text-center">
+      <Icon className="h-16 w-16 text-main mb-4" />
+      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <p>{text}</p>
+    </div>
   );
 };
 

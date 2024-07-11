@@ -4,12 +4,13 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase">
-            Lorem ipsum Lorem. <span className="text-main">Lorem, ipsum.</span>
+            CONNECT WITH CORAZON <span className="text-main">HAWAI</span>
           </h1>
         </div>
       </div>
       <span className="mt-6 text-sm sm:text-md md:text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
+        Questions? Want to volunteer or support our cause? Reach out to us
+        today!
       </span>
       <div className="mt-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 sm:px-16 md:px-32 lg:px-64">
@@ -36,7 +37,7 @@ const ContactForm = () => {
         </div>
         <div className="text-center mt-12">
           <button
-            className="bg-main text-white p-2 sm:p-4 md:p-6 px-4 sm:px-6 md:px-8 lg:px-12 text-sm sm:text-md md:text-lg lg:text-2xl"
+            className="bg-main text-white px-4 py-6 sm:p-4 md:p-6 px-4 sm:px-6 md:px-8 lg:px-12 text-sm sm:text-md md:text-lg lg:text-2xl"
             style={{ borderRadius: "4rem" }}
           >
             SUBMIT
