@@ -1,0 +1,55 @@
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .gallery-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-card {
+    min-width: 25%;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 1024px) {
+    .gallery-card {
+      min-width: 33.33%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-card {
+      min-width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-card {
+      min-width: 100%;
+    }
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 300px; /* Puedes ajustar esto según tus necesidades */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card .icon-color {
+    font-size: 3rem; /* Ajusta el tamaño del icono según tus necesidades */
+  }
+  
+  .service-card .content {
+    flex-grow: 1;
+  }
+  
+  

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                  // Especifica el target de compilación de JavaScript.
+    "lib": ["dom", "dom.iterable", "esnext"],        // Bibliotecas que el compilador debe incluir.
+    "allowJs": true,                                 // Permite incluir archivos JavaScript en el proyecto.
+    "skipLibCheck": true,                            // Omite la comprobación de tipos en archivos de declaración.
+    "esModuleInterop": true,                         // Habilita la interoperabilidad entre módulos CommonJS y ES6.
+    "allowSyntheticDefaultImports": true,            // Permite la importación de módulos CommonJS como si fueran ES6.
+    "strict": true,                                  // Habilita todas las comprobaciones estrictas de TypeScript.
+    "forceConsistentCasingInFileNames": true,        // Asegura que los nombres de archivo tengan una capitalización coherente.
+    "module": "esnext",                              // Especifica el módulo de salida.
+    "moduleResolution": "node",                      // Especifica la estrategia de resolución de módulos.
+    "resolveJsonModule": true,                       // Permite la importación de módulos JSON.
+    "isolatedModules": true,                         // Asegura que cada archivo actúe como un módulo independiente.
+    "noEmit": true,                                  // No genera archivos de salida (por ejemplo, archivos .js).
+    "jsx": "react-jsx",                              // Especifica el modo JSX.
+    "typeRoots": ["node_modules/@types", "src/types"] // Raíces de tipos personalizadas.
+  },
+  "include": ["src"]                                  // Directorios y archivos que deben incluirse en el proyecto.
+}
