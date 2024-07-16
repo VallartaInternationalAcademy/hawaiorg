@@ -19,33 +19,75 @@ const Footer: React.FC = () => {
                   </p>
                 </div>
                 <div className="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <h5 className="footer-head">Company</h5>
+                  <h5 className="footer-head">Site Map</h5>
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
                       <a href="javascript:void(0)" className="text-foot">
-                        <i className="uil uil-angle-right-b me-1"></i> About us
+                        <i className="uil uil-angle-right-b me-1"></i> Home
                       </a>
                     </li>
                     <li>
                       <a href="javascript:void(0)" className="text-foot">
-                        <i className="uil uil-angle-right-b me-1"></i> Services
+                        <i className="uil uil-angle-right-b me-1"></i> About Us
                       </a>
                     </li>
                     <li>
                       <a href="javascript:void(0)" className="text-foot">
-                        <i className="uil uil-angle-right-b me-1"></i> Team
+                        <i className="uil uil-angle-right-b me-1"></i> What do
+                        we do
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Donate
                       </a>
                     </li>
                   </ul>
                 </div>
 
                 <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <h5 className="footer-head">Usefull Links</h5>
+                  <h5 className="footer-head">Contact us</h5>
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
                       <a href="javascript:void(0)" className="text-foot">
-                        <i className="uil uil-angle-right-b me-1"></i> Terms of
-                        Services
+                        <i className="uil uil-angle-right-b me-1"></i> Telefono
+                        1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Telefono
+                        2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Donate
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 className="footer-head">Social</h5>
+                  <ul className="list-unstyled footer-list mt-4">
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Facebook
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> Tik tok
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" className="text-foot">
+                        <i className="uil uil-angle-right-b me-1"></i> X
                       </a>
                     </li>
                   </ul>

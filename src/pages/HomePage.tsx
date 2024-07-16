@@ -126,12 +126,9 @@ const HomePage: React.FC = () => {
           <div className="row justify-content-center">
             <div className="col-12">
               <div className="section-title text-center mb-4 pb-2">
-                <h4 className="title fw-semibold mb-4">Charity Gallery</h4>
+                <h4 className="title fw-semibold mb-4">Capturing Compassion</h4>
                 <p className="text-muted para-desc mx-auto mb-0">
-                  Start working with{" "}
-                  <span className="text-primary fw-bold">Landrick</span> that
-                  can provide everything you need to generate awareness, drive
-                  traffic, connect.
+                  A Glimpse into Our Efforts to Empower and Uplift Our Community
                 </p>
               </div>
             </div>

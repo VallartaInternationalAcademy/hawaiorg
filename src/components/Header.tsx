@@ -48,7 +48,12 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
             >
               <div className="btn">
-                <span className="btn btn-primary rounded-5">DONATE</span>
+                <Link
+                  to={"page_no_found/"}
+                  className="btn btn-primary rounded-5"
+                >
+                  DONATE
+                </Link>
               </div>
             </a>
           </li>
@@ -68,10 +73,33 @@ const Header: React.FC = () => {
                 About us
               </Link>
             </li>
-            <li>
+            <li className="has-submenu parent-parent-menu-item">
               <Link to="what-do-we-do" className="sub-menu-item">
                 What do we do
               </Link>
+              <span className="menu-arrow"></span>
+              <ul className="submenu">
+                <li>
+                  <Link to={"services/1"} className="sub-menu-item">
+                    Housing Navegation
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"services/2"} className="sub-menu-item">
+                    Healthcare
+                  </Link>
+                </li>
+                <li className="sub-menu-item">
+                  <Link to={"services/3"} className="sub-menu-item">
+                    Medical Respite And Recuperative Care
+                  </Link>
+                </li>
+                <li className="sub-menu-item">
+                  <Link to={"services/4"} className="sub-menu-item">
+                    Shelter and Support
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="stories" className="sub-menu-item">

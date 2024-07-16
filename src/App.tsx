@@ -9,6 +9,7 @@ import WhatWeDo from "./pages/WhatWeDo";
 import StoriesPage from "./pages/StoriesPage";
 import ServicePageLayout from "./pages/services/ServicePageLayout";
 import StoryDetailPage from "./pages/stories/StoryDetailPage";
+import NotFoundPage from "./pages/notFoundPage";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           </Route>
 
           <Route path="services/:id" element={<ServicePageLayout />} />
+          <Route path="page_no_found/" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Router>

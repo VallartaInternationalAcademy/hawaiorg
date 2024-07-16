@@ -1,6 +1,7 @@
 import React from "react";
 import bgImage from "../../assets/images/charity/bg.jpg";
 import overlayImage from "../../assets/images/overlay.png";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -36,18 +37,12 @@ const Hero: React.FC = () => {
                 and support services
               </p>
               <div className="mt-4">
-                <a
-                  href="/"
+                <Link
+                  to={"page_no_found/"}
                   className="btn btn-lg btn-primary rounded-pill mt-1 me-2"
                 >
                   Donate Now
-                </a>
-                <a
-                  href="/"
-                  className="btn btn-lg btn-outline-primary rounded-pill mt-1"
-                >
-                  View Causes
-                </a>
+                </Link>
               </div>
             </div>
           </div>

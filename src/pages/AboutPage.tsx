@@ -50,7 +50,7 @@ const AboutPage = () => {
       <HeroPage
         imagen={aboutUsImage}
         page="About Us"
-        description="mpowering families, building futures: Join us in making homelessness a thing of the past."
+        description="Empowering families, building futures: Join us in making homelessness a thing of the past."
         Breadcrumb={[
           { link: "/", nombre: "Home" },
           { link: "about", nombre: "About Us" },

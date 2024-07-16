@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosExpand } from "react-icons/io";
 
 interface GalleryCardProps {
   imageSrc: string;
@@ -25,7 +26,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
               href={imageSrc}
               className="work-icon bg-white d-inline-flex rounded-pill lightbox"
             >
-              <i className="fea icon-sm image-icon"></i>
+              <IoIosExpand className="image-icon" />
             </a>
           </div>
         </div>

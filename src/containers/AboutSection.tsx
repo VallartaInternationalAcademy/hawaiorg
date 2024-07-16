@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../assets/images/charity/cause01.jpg";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -34,9 +35,9 @@ const AboutSection = () => {
                   everyone has the chance to flourish and contribute to a better
                   tomorrow
                 </p>
-                <a href="javascript:void(0)" className="btn btn-primary mt-3">
-                  Contact us
-                </a>
+                <Link to={"page_no_found/"} className="btn btn-primary mt-3">
+                  Donate Now
+                </Link>
               </div>
             </div>
           </div>

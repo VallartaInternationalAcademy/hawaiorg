@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../assets/images/charity/cta.jpg";
+import { Link } from "react-router-dom";
 
 const DonateSection = () => {
   return (
@@ -69,13 +70,13 @@ const DonateSection = () => {
                   </div>
 
                   <div className="col-lg-12 mt-3">
-                    <button
+                    <Link
+                      to={"page_no_found/"}
                       id="donatefund"
-                      name="send"
                       className="btn btn-primary"
                     >
                       Donate Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </form>

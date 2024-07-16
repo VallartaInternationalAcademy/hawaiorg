@@ -9,12 +9,9 @@ const Histories = () => {
       <div className="row justify-content-center">
         <div className="col-12">
           <div className="section-title text-center mb-4 pb-2">
-            <h4 className="title fw-semibold mb-4">Popular Causes</h4>
+            <h4 className="title fw-semibold mb-4">Stories of Hope</h4>
             <p className="text-muted para-desc mx-auto mb-0">
-              Start working with{" "}
-              <span className="text-primary fw-bold">Landrick</span> that can
-              provide everything you need to generate awareness, drive traffic,
-              connect.
+              Inspiring Journeys of Transformation with Corazon Hawaii
             </p>
           </div>
         </div>
