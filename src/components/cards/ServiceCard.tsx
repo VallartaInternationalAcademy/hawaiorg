@@ -24,7 +24,6 @@ const ServiceCard = ({
         <div className="card-body p-0 content text-center">
           <h5>{service}</h5>
           <p className="para text-muted">{descripcion}</p>
-
           <div className="">
             <Link to={link} className="readmore text-muted fw-semibold">
               Read more <i className="uil uil-arrow-right"></i>

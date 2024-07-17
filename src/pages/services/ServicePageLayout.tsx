@@ -1,6 +1,16 @@
 import HeroPage from "../../components/Hero/HeroPage";
 import { useParams } from "react-router-dom";
 import { getDataByid } from "../../data/Services";
+import { FaBrain, FaRecycle } from "react-icons/fa6";
+import { FaHeartbeat, FaShieldAlt } from "react-icons/fa";
+import sevice1 from "../../assets/images/charity/service1.png";
+import { IconType } from "react-icons";
+
+interface Props {
+  Icon: IconType;
+  tittle: string;
+  description: string;
+}
 
 const ServicePageLayout = () => {
   const { id } = useParams();
@@ -9,6 +19,16 @@ const ServicePageLayout = () => {
   if (!item) {
     return <div>Item not found</div>;
   }
+
+  const ServiceCardInfo = ({ Icon, tittle, description }: Props) => {
+    return (
+      <div className="col-md-3 col-6 my-2">
+        <Icon size={50} className="text-primary" />
+        <h5>{tittle}</h5>
+        <p>{description}</p>
+      </div>
+    );
+  };
 
   return (
     <div>
@@ -44,6 +64,26 @@ const ServicePageLayout = () => {
             <div className="section-title mb-4 pb-2">
               <span className="text-primary">{item.Service}</span>
               <h4 className="title">HOW IS IT DONE</h4>
+            </div>
+          </div>
+          <div className="col-12 text-center">
+            <div className="row justify-content-center">
+              {item.services.map((s) => (
+                <ServiceCardInfo
+                  Icon={s.Icon}
+                  description={s.description}
+                  tittle={s.title}
+                />
+              ))}
+            </div>
+            <div className="row justify-content-center my-5">
+              <div className="col-md-6 col-12">
+                <img
+                  src={item.serviceImage}
+                  alt="Central Image"
+                  className="img-fluid"
+                />
+              </div>
             </div>
           </div>
         </div>

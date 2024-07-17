@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             <div className="title-heading">
               <h5 className="fw-bold text-white title-dark">
                 <i className="mdi mdi-heart text-danger align-middle"></i>{" "}
-                CORAZON HAWAI
+                CORAZON HAWAII
               </h5>
               <h4 className="display-3 my-4 fw-bold text-white title-dark">
                 REBUILDING LIVES, RESTORING DIGNITY: YOUR PARTNER IN ENDING

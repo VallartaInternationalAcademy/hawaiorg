@@ -49,7 +49,7 @@ const EstatdictisDetail: Detail[] = [
 const Estaditics = () => {
   const EstadisticCard = ({ Icon, Tittle, number }: Detail) => {
     return (
-      <div className="col-lg-4 col-md-2 col-2 mt-4 pt-2">
+      <div className="col-lg-4 col-md-6 col-12 mt-4 pt-2">
         <div className="features feature-primary text-center pt-3 pb-3">
           <Icon className="h2 color" />
           <div className="content text-muted mt-3">
@@ -68,7 +68,7 @@ const Estaditics = () => {
             <div className="section-title">
               <span className="text-primary">OUR IMPACT</span>
               <h4 className="title mb-4">
-                TRANSFORMING LIVES <br />{" "}
+                TRANSFORMING LIVES <br />
                 <span className="text-primary">ONE FAMILY AT A TIME</span>
               </h4>
               <p className="text-muted">
@@ -78,8 +78,9 @@ const Estaditics = () => {
               </p>
             </div>
             <div className="row">
-              {EstatdictisDetail.map((d) => (
+              {EstatdictisDetail.map((d, index) => (
                 <EstadisticCard
+                  key={index}
                   Icon={d.Icon}
                   Tittle={d.Tittle}
                   number={d.number}
@@ -89,7 +90,7 @@ const Estaditics = () => {
           </div>
         </div>
         <div className="col-md-6">
-          <img src={PersonImg} className="img-fluid" alt="" />
+          <img src={PersonImg} className="img-fluid" alt="Impact Image" />
         </div>
       </div>
     </div>
