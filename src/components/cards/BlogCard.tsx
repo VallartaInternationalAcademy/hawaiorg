@@ -33,12 +33,7 @@ const BlogCard = ({
           <div className="col-md-6">
             <div className="card-body content">
               <h5>
-                <a
-                  href="javascript:void(0)"
-                  className="card-title title text-dark"
-                >
-                  {titulo}
-                </a>
+                <a className="card-title title text-dark">{titulo}</a>
               </h5>
               <p className="text-muted mb-0">{descripcion}</p>
               <div className="post-meta d-flex justify-content-between mt-3">

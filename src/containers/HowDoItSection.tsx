@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div className="ms-lg-4">
               <div className="section-title">
                 <h4 className="title mb-4">
-                  HOW DO <span className="text-primary">WE DO IT</span>
+                  HOW DO <span className="text-primary">WE DO IT?</span>
                 </h4>
                 <p className="text-muted">
                   At{" "}

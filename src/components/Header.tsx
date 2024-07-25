@@ -1,14 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo2.png";
 
 const Header: React.FC = () => {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [subMenuOpen, setSubMenuOpen] = useState<string | null>(null);
+
+  // Toggle menu for mobile view
   const toggleMenu = () => {
     const menu = document.getElementById("isToggle");
     const navigation = document.getElementById("navigation");
     if (menu && navigation) {
       menu.classList.toggle("open");
       navigation.classList.toggle("open");
+    }
+  };
+
+  // Activate menu items based on current URL
+  useEffect(() => {
+    const menuItems = document.getElementsByClassName("sub-menu-item");
+    const currentUrl = window.location.href;
+
+    Array.from(menuItems).forEach((item: Element) => {
+      if ((item as HTMLAnchorElement).href === currentUrl) {
+        (item as HTMLAnchorElement).classList.add("active");
+        let parent = item.closest("li");
+        while (parent) {
+          parent.classList.add("active");
+          parent =
+            parent.closest(".parent-menu-item") ||
+            parent.closest(".child-menu-item");
+        }
+      }
+    });
+  }, []);
+
+  // Handle sub-menu toggle on click
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    if (id === "javascript:void(0)") {
+      setSubMenuOpen(subMenuOpen === id ? null : id);
     }
   };
 
@@ -40,7 +74,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Login button Start */}
-        <ul className="buy-button list-inline mb-0">
+        <ul className="buy-button list-inline mb-0 d-none d-sm-block">
           <li className="list-inline-item ps-1 mb-0">
             <a
               href="https://1.envato.market/landrick"
@@ -62,7 +96,7 @@ const Header: React.FC = () => {
 
         <div id="navigation">
           {/* Navigation Menu */}
-          <ul className="navigation-menu ">
+          <ul className="navigation-menu">
             <li>
               <Link to="/" className="sub-menu-item">
                 Home
@@ -74,14 +108,22 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li className="has-submenu parent-parent-menu-item">
-              <Link to="what-do-we-do" className="sub-menu-item">
+              <Link
+                to="what-do-we-do"
+                className="sub-menu-item"
+                onClick={(e) => handleLinkClick(e, "javascript:void(0)")}
+              >
                 What do we do
               </Link>
               <span className="menu-arrow"></span>
-              <ul className="submenu">
+              <ul
+                className={`submenu ${
+                  subMenuOpen === "javascript:void(0)" ? "open" : ""
+                }`}
+              >
                 <li>
                   <Link to={"services/1"} className="sub-menu-item">
-                    Housing Navegation
+                    Housing Navigation
                   </Link>
                 </li>
                 <li>
@@ -89,18 +131,19 @@ const Header: React.FC = () => {
                     Healthcare
                   </Link>
                 </li>
-                <li className="sub-menu-item">
+                <li>
                   <Link to={"services/3"} className="sub-menu-item">
                     Medical Respite And Recuperative Care
                   </Link>
                 </li>
-                <li className="sub-menu-item">
+                <li>
                   <Link to={"services/4"} className="sub-menu-item">
                     Shelter and Support
                   </Link>
                 </li>
               </ul>
             </li>
+
             <li>
               <Link to="stories" className="sub-menu-item">
                 Stories

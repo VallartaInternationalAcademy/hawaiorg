@@ -10,6 +10,7 @@ import team5 from "../assets/images/client/05.jpg";
 import team6 from "../assets/images/client/06.jpg";
 import StrategicSection from "../containers/StrategicSection";
 import DonateSection from "../containers/DonateSection";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const team: profile[] = [
   {
@@ -45,16 +46,14 @@ const team: profile[] = [
 ];
 
 const AboutPage = () => {
+  useScrollToTop();
   return (
     <div>
       <HeroPage
         imagen={aboutUsImage}
-        page="About Us"
+        page="ABOUT US"
         description="Empowering families, building futures: Join us in making homelessness a thing of the past."
-        Breadcrumb={[
-          { link: "/", nombre: "Home" },
-          { link: "about", nombre: "About Us" },
-        ]}
+        Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <section className="section">
         <AboutSection />

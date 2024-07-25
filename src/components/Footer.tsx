@@ -22,23 +22,23 @@ const Footer: React.FC = () => {
                   <h5 className="footer-head">Site Map</h5>
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Home
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> About Us
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> What do
                         we do
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Donate
                       </a>
                     </li>
@@ -49,19 +49,19 @@ const Footer: React.FC = () => {
                   <h5 className="footer-head">Contact us</h5>
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Telefono
                         1
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Telefono
                         2
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Donate
                       </a>
                     </li>
@@ -71,22 +71,22 @@ const Footer: React.FC = () => {
                   <h5 className="footer-head">Social</h5>
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Facebook
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Instagram
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> Tik tok
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" className="text-foot">
+                      <a className="text-foot">
                         <i className="uil uil-angle-right-b me-1"></i> X
                       </a>
                     </li>

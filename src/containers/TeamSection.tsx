@@ -24,9 +24,7 @@ const TeamSection = ({ Team }: TeamProps) => {
               />
               <div className="content ms-3">
                 <h5 className="mb-0">
-                  <a href="javascript:void(0)" className="text-dark">
-                    {t.nombre}
-                  </a>
+                  <a className="text-dark">{t.nombre}</a>
                 </h5>
                 <small className="position text-muted">{t.puesto}</small>
               </div>

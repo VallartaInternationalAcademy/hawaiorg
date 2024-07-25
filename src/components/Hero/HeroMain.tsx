@@ -1,6 +1,5 @@
 import React from "react";
-import bgImage from "../../assets/images/charity/bg.jpg";
-import overlayImage from "../../assets/images/overlay.png";
+import bgImage from "../../assets/images/charity/Y2meta.app-UNICEF-_-for-every-child-_1080p_.gif";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {

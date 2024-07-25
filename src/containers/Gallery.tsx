@@ -1,29 +1,111 @@
-import React from "react";
-import GalleryCard from "../components/cards/GalleryCard";
-import overlayImage from "../assets/images/overlay.png";
+import React, { useState } from "react";
+import {
+  ImageList,
+  ImageListItem,
+  Modal,
+  Box,
+  IconButton,
+} from "@mui/material";
+import { IoIosClose } from "react-icons/io";
+import { FaChevronLeft, FaChevronRight, FaExpand } from "react-icons/fa";
 
-import g1 from "../assets/images/charity/g1.jpg";
-import g2 from "../assets/images/charity/g2.jpg";
-import g3 from "../assets/images/charity/g3.jpg";
-import g4 from "../assets/images/charity/g4.jpg";
-import g5 from "../assets/images/charity/g5.jpg";
-import g6 from "../assets/images/charity/g6.jpg";
-import g7 from "../assets/images/charity/g7.jpg";
+interface GalleryProps {
+  images: string[];
+}
 
-const Gallery: React.FC = () => {
-  const images = [g1, g2, g3, g4, g5, g6, g7];
+const Gallery = ({ images }: GalleryProps) => {
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [hoverIndex, setHoverIndex] = useState(0);
+
+  const handleOpen = (index: number) => {
+    setCurrentIndex(index);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
-    <div className="gallery-container">
-      <div className="gallery-wrapper">
-        {images.map((image, index) => (
-          <GalleryCard
+    <div>
+      <ImageList cols={3} gap={8}>
+        {images.map((item, index) => (
+          <ImageListItem
             key={index}
-            imageSrc={`${image}`}
-            overlayImageSrc={overlayImage}
-          />
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(0)}
+            onClick={() => handleOpen(index)}
+            style={{ position: "relative" }}
+          >
+            <img src={item} alt={`image-${index}`} />
+            {hoverIndex === index && (
+              <IconButton
+                onClick={() => handleOpen(index)}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  color: "white",
+                }}
+              >
+                <FaExpand />
+              </IconButton>
+            )}
+          </ImageListItem>
         ))}
-      </div>
+      </ImageList>
+
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "80%",
+            height: "80%",
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <IconButton
+            sx={{ position: "absolute", top: 16, right: 16 }}
+            onClick={handleClose}
+          >
+            <IoIosClose />
+          </IconButton>
+          <IconButton onClick={handlePrev}>
+            <FaChevronLeft />
+          </IconButton>
+          <img
+            src={images[currentIndex]}
+            alt={images[currentIndex]}
+            style={{ maxHeight: "100%", maxWidth: "100%" }}
+          />
+          <IconButton onClick={handleNext}>
+            <FaChevronRight />
+          </IconButton>
+        </Box>
+      </Modal>
     </div>
   );
 };

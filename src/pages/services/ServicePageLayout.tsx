@@ -5,6 +5,8 @@ import { FaBrain, FaRecycle } from "react-icons/fa6";
 import { FaHeartbeat, FaShieldAlt } from "react-icons/fa";
 import sevice1 from "../../assets/images/charity/service1.png";
 import { IconType } from "react-icons";
+import useScrollToTop from "../../hooks/useScrollToTop";
+import { useEffect } from "react";
 
 interface Props {
   Icon: IconType;
@@ -16,6 +18,14 @@ const ServicePageLayout = () => {
   const { id } = useParams();
   const item = getDataByid(id ? id : "1");
 
+  useEffect(() => {
+    // Scroll to top smoth
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [item]);
+
   if (!item) {
     return <div>Item not found</div>;
   }
@@ -25,7 +35,7 @@ const ServicePageLayout = () => {
       <div className="col-md-3 col-6 my-2">
         <Icon size={50} className="text-primary" />
         <h5>{tittle}</h5>
-        <p>{description}</p>
+        <p className="text-muted">{description}</p>
       </div>
     );
   };
@@ -36,10 +46,7 @@ const ServicePageLayout = () => {
         imagen={item.MainImage}
         page={item.Tittle}
         description={item.MainDescripcion}
-        Breadcrumb={[
-          { link: "/", nombre: "Home" },
-          { link: "stories", nombre: "Stories" },
-        ]}
+        Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <section className="section">
         <div className="container">
@@ -63,7 +70,7 @@ const ServicePageLayout = () => {
           <div className="col-12 text-center">
             <div className="section-title mb-4 pb-2">
               <span className="text-primary">{item.Service}</span>
-              <h4 className="title">HOW IS IT DONE</h4>
+              <h4 className="title">HOW IS IT DONE?</h4>
             </div>
           </div>
           <div className="col-12 text-center">

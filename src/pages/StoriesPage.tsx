@@ -7,6 +7,7 @@ import storie3 from "../assets/images/charity/cause03.jpg";
 import storie4 from "../assets/images/charity/cause04.jpg";
 import BlogCard from "../components/cards/BlogCard";
 import DonateSection from "../containers/DonateSection";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 interface StoriesType {
   imagen: string;
@@ -52,16 +53,14 @@ const Stories: StoriesType[] = [
 ];
 
 const StoriesPage = () => {
+  useScrollToTop();
   return (
     <div>
       <HeroPage
         imagen={storiesImage}
         page="STORIES OF TRANSFORMATION"
         description="Discover inspiring stories of change and resilience from individuals and families supported by Corazon Hawaii.."
-        Breadcrumb={[
-          { link: "/", nombre: "Home" },
-          { link: "stories", nombre: "Stories" },
-        ]}
+        Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
 
       <section className="section">
@@ -77,7 +76,7 @@ const StoriesPage = () => {
             </div>
             {Stories.map((s) => (
               <BlogCard
-                HistoryLink="story/1"
+                HistoryLink="/story/1"
                 descripcion={s.descripcion}
                 imagen={s.imagen}
                 nombre={s.nombre}

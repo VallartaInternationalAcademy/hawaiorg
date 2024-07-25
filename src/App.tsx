@@ -19,10 +19,8 @@ const App: React.FC = () => {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="what-do-we-do" element={<WhatWeDo />} />
-          <Route path="stories" element={<StoriesPage />}>
-            <Route path="story/:id" element={<StoryDetailPage />} />
-          </Route>
-
+          <Route path="stories" element={<StoriesPage />} />
+          <Route path="story/:id" element={<StoryDetailPage />} />
           <Route path="services/:id" element={<ServicePageLayout />} />
           <Route path="page_no_found/" element={<NotFoundPage />} />
         </Route>

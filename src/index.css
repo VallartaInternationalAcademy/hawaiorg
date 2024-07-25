@@ -52,4 +52,23 @@
     flex-grow: 1;
   }
   
+  .donate-now-btn {
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg); /* Ajuste para centrar y orientar el texto correctamente */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+    padding: 10px 10px;
+    background-color: #6EBEC3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    writing-mode: vertical-rl; /* Hace que el texto aparezca verticalmente */
+  }
+  
+  .donate-now-btn:hover {
+    background-color: #6EBEC3;
+  }
   

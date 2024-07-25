@@ -8,18 +8,17 @@ import { CiMedicalClipboard } from "react-icons/ci";
 import HowDoItSection from "../containers/HowDoItSection";
 import Estaditics from "../containers/Estaditics";
 import DonateSection from "../containers/DonateSection";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 const WhatWeDo = () => {
+  useScrollToTop();
   return (
     <div>
       <HeroPage
         imagen={wdwdImage}
         page="MAKING A DIFFERENCE"
         description="mpowering families, building futures: Join us in making homelessness a thing of the past."
-        Breadcrumb={[
-          { link: "/", nombre: "Home" },
-          { link: "what-do-we-do", nombre: "What do we do" },
-        ]}
+        Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <div className="container mt-100 mt-60">
         <div className="row justify-content-center">

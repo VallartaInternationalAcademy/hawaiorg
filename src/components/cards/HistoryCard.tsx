@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface HistoryCardProps {
   img: string;
@@ -21,12 +22,12 @@ const HistoryCard = ({ img, tittle, history }: HistoryCardProps) => {
           <p className="text-muted mb-0">{history}</p>
 
           <div className="d-flex align-items-center justify-content-between mt-3">
-            <a
-              href=""
+            <Link
+              to="/story/1"
               className="btn btn-link primary fw-semibold text-primary"
             >
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
