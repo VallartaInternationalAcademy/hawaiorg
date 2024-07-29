@@ -1,5 +1,5 @@
 import React from "react";
-import wdwdImage from "../assets/images/charity/cta.jpg";
+import wdwdImage from "../assets/images/hawai/CapturingCompassion2.jpg";
 import HeroPage from "../components/Hero/HeroPage";
 import ServiceCard from "../components/cards/ServiceCard";
 import { BsHouse } from "react-icons/bs";
@@ -17,7 +17,7 @@ const WhatWeDo = () => {
       <HeroPage
         imagen={wdwdImage}
         page="MAKING A DIFFERENCE"
-        description="mpowering families, building futures: Join us in making homelessness a thing of the past."
+        description="Empowering families, building futures: Join us in making homelessness a thing of the past."
         Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <div className="container mt-100 mt-60">
@@ -28,10 +28,11 @@ const WhatWeDo = () => {
                 Our <span className="text-primary fw-bold">Services</span>
               </h4>
               <p className="text-muted para-desc mb-0 mx-auto">
-                Start working with Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Enim, minima error voluptas facilis voluptates
-                tenetur accusantium laboriosam, pariatur non, veniam veritatis?
-                Laudantium, repudiandae perferendis?
+                At Corazon Hawaii, we provide comprehensive support to homeless
+                families and individuals, helping them achieve stability and
+                rebuild their lives with dignity and hope. Our dedicated team
+                ensures that each person receives the care and assistance they
+                need for lasting change.
               </p>
             </div>
           </div>

@@ -1,27 +1,27 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero/HeroMain";
 import FeatureCard from "../components/cards/FeatureCard";
 import { PiTargetDuotone } from "react-icons/pi";
 import { BsEye } from "react-icons/bs";
 import { RiHandHeartLine } from "react-icons/ri";
-import aboutUs from "../assets/images/charity/about.png";
+import aboutUs from "../assets/images/hawai/Aboutus.png";
 import Gallery from "../containers/Gallery";
 import Histories from "../containers/Histories";
 import DonateSection from "../containers/DonateSection";
 import { Link } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
-import g1 from "../assets/images/charity/g1.jpg";
 import g2 from "../assets/images/charity/g2.jpg";
 import g3 from "../assets/images/charity/g3.jpg";
 import g4 from "../assets/images/charity/g4.jpg";
 import g5 from "../assets/images/charity/g5.jpg";
-import g6 from "../assets/images/charity/g6.jpg";
-import g7 from "../assets/images/charity/g7.jpg";
+import g6 from "../assets/images/hawai/CapturingCompassion2.jpg";
+import g7 from "../assets/images/hawai/CapturingCompassion.jpg";
+import g8 from "../assets/images/hawai/g6.png";
+import g9 from "../assets/images/hawai/g7.png";
+import g10 from "../assets/images/hawai/g8.png";
 
 const HomePage: React.FC = () => {
-  const images = [g1, g2, g3, g4, g5, g6, g7, g1, g2];
+  const images = [g2, g3, g4, g5, g6, g7, g8, g9, g10];
   useScrollToTop();
   return (
     <div>

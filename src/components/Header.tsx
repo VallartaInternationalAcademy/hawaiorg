@@ -107,13 +107,18 @@ const Header: React.FC = () => {
                 About us
               </Link>
             </li>
+            <li>
+              <Link to="what-do-we-do" className="sub-menu-item">
+                What Do We Do
+              </Link>
+            </li>
             <li className="has-submenu parent-parent-menu-item">
               <Link
-                to="what-do-we-do"
+                to=""
                 className="sub-menu-item"
                 onClick={(e) => handleLinkClick(e, "javascript:void(0)")}
               >
-                What do we do
+                Services
               </Link>
               <span className="menu-arrow"></span>
               <ul
@@ -127,7 +132,7 @@ const Header: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"services/2"} className="sub-menu-item">
+                  <Link to={"services/4"} className="sub-menu-item">
                     Healthcare
                   </Link>
                 </li>
@@ -137,7 +142,7 @@ const Header: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"services/4"} className="sub-menu-item">
+                  <Link to={"services/2"} className="sub-menu-item">
                     Shelter and Support
                   </Link>
                 </li>

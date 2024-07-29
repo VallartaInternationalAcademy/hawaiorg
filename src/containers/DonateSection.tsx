@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/images/charity/cta.jpg";
+import banner from "../assets/images/hawai/bg4.png";
 import { Link } from "react-router-dom";
 
 const DonateSection = () => {

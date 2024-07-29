@@ -1,10 +1,10 @@
 import React from "react";
 import HeroPage from "../components/Hero/HeroPage";
 import storiesImage from "../assets/images/charity/cause04.jpg";
-import storie1 from "../assets/images/charity/cause01.jpg";
-import storie2 from "../assets/images/charity/cause02.jpg";
-import storie3 from "../assets/images/charity/cause03.jpg";
-import storie4 from "../assets/images/charity/cause04.jpg";
+import storie1 from "../assets/images/hawai/STORIES (3).png";
+import storie2 from "../assets/images/hawai/STORIES (4).png";
+import storie3 from "../assets/images/hawai/STORIES (5).png";
+import storie4 from "../assets/images/hawai/STORIES (6).png";
 import BlogCard from "../components/cards/BlogCard";
 import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";

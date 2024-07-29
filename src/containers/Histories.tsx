@@ -1,7 +1,7 @@
 import HistoryCard from "../components/cards/HistoryCard";
-import perfil1 from "../assets/images/charity/cause01.jpg";
-import perfil2 from "../assets/images/charity/cause02.jpg";
-import perfil3 from "../assets/images/charity/cause04.jpg";
+import perfil1 from "../assets/images/hawai/STORIES.png";
+import perfil2 from "../assets/images/hawai/STORIES (3).png";
+import perfil3 from "../assets/images/hawai/STORIES (5).png";
 
 const Histories = () => {
   return (

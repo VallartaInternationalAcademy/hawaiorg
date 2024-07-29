@@ -1,45 +1,40 @@
 import HeroPage from "../components/Hero/HeroPage";
-import aboutUsImage from "../assets/images/company/aboutus.jpg";
+import aboutUsImage from "../assets/images/hawai/Home-About us.png";
 import AboutSection from "../containers/AboutSection";
 import TeamSection, { profile } from "../containers/TeamSection";
-import team1 from "../assets/images/client/01.jpg";
-import team2 from "../assets/images/client/02.jpg";
-import team3 from "../assets/images/client/03.jpg";
-import team4 from "../assets/images/client/04.jpg";
-import team5 from "../assets/images/client/05.jpg";
-import team6 from "../assets/images/client/06.jpg";
+import unamed from "../assets/images/hawai/unnamed.png";
 import StrategicSection from "../containers/StrategicSection";
 import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";
 
 const team: profile[] = [
   {
-    imagen: team1,
+    imagen: unamed,
     nombre: "Mildred Garza",
     puesto: "CEO",
   },
   {
-    imagen: team2,
+    imagen: unamed,
     nombre: "Gavin Lynch",
     puesto: "CEO",
   },
   {
-    imagen: team3,
+    imagen: unamed,
     nombre: "Barbara Kelley",
     puesto: "CEO",
   },
   {
-    imagen: team5,
+    imagen: unamed,
     nombre: "Howard Roberson",
     puesto: "CEO",
   },
   {
-    imagen: team6,
+    imagen: unamed,
     nombre: "Jayden Peterson",
     puesto: "CEO",
   },
   {
-    imagen: team4,
+    imagen: unamed,
     nombre: "Billy Vega",
     puesto: "CEO",
   },
