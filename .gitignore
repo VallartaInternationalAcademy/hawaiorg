@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+src/assets/images/charity/Y2meta.app-UNICEF-_-for-every-child-_1080p_.gif
 dist-ssr
 *.local
 
