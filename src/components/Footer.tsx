@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logoLigth.png";
 // react icons social medias
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";

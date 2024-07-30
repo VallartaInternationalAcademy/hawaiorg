@@ -55,7 +55,7 @@ const Services: ServiceType[] = [
     Service: "HOUSING NAVIGATION",
     text: "Housing Navigation plays a crucial role in assisting homeless families by guiding them through the complex journey of finding stable and secure housing options. Our dedicated team provides comprehensive support throughout every step of the housing search process, starting from assessing individual needs and preferences to actively identifying suitable housing opportunities. We offer expert guidance and practical assistance during lease negotiations and the finalization of contracts, ensuring that families transition into safe and sustainable living environments with confidence and support",
     subImage: subImage1,
-    serviceImage: serviceImage1,
+    serviceImage: serviceImage4,
     services: [
       {
         title: "Needs Assessment",
@@ -72,7 +72,7 @@ const Services: ServiceType[] = [
       {
         title: "Search Support",
         description:
-          "Assess each family's housing needs and preferences comprehensively.",
+          "Aid in actively searching for suitable and affordable housing",
         Icon: HiOutlineMagnifyingGlass,
       },
       {
@@ -90,7 +90,7 @@ const Services: ServiceType[] = [
     MainDescripcion:
       "Providing Safe Havens and Comprehensive Support for Families in Need",
     Service: "SHELTER AND SUPPORT",
-    text: "roviding temporary shelter and comprehensive support to help families transition from homelessness to permanent housing is a critical initiative. Our program offers a safe and stable environment wherefamilies can find respite and support during their journey towards securing sustainable housing solutions.Beyond shelter, we provide personalized case management to address immediate needs, offer access to educational and vocational resources, and facilitate connections to community services. By fostering a supportive network and empowering families with the tools and resources they need, we aim to ensure asmooth and successful transition, ultimately helping them rebuild their lives with dignity and security",
+    text: "Providing temporary shelter and comprehensive support to help families transition from homelessness to permanent housing is a critical initiative. Our program offers a safe and stable environment wherefamilies can find respite and support during their journey towards securing sustainable housing solutions.Beyond shelter, we provide personalized case management to address immediate needs, offer access to educational and vocational resources, and facilitate connections to community services. By fostering a supportive network and empowering families with the tools and resources they need, we aim to ensure asmooth and successful transition, ultimately helping them rebuild their lives with dignity and security",
     subImage: subImage2,
     serviceImage: serviceImage2,
     services: [
@@ -132,7 +132,7 @@ const Services: ServiceType[] = [
     services: [
       {
         title: "Safe Environment",
-        description: "AEnsure a safe and supportive recovery environment.",
+        description: "Ensure a safe and supportive recovery environment.",
         Icon: IoShieldCheckmarkOutline,
       },
       {
@@ -163,7 +163,7 @@ const Services: ServiceType[] = [
     Service: "HEALTHCARE SERVICE",
     text: "We ensure that homeless families and individuals have access to essential healthcare services, addressing both their physical and mental well-being. Our comprehensive healthcare initiatives encompass initial medical assessments to identify urgent health needs, continuous medical care through partnerships with clinics and mobile health services, specialized psychological support to address mental health challenges, and the implementation of preventive health education programs to promote long-term wellness. These efforts aim to safeguard the health of our community members,providing vital care and support to those most in need",
     subImage: subImage4,
-    serviceImage: serviceImage4,
+    serviceImage: serviceImage1,
     services: [
       {
         title: "Medical Assessments",

@@ -55,7 +55,7 @@ const WhatWeDo = () => {
             services to ensure the
             well-being of individuals
             and families."
-            link="/services/2"
+            link="/services/4"
           />
           <ServiceCard
             Icon={CiMedicalClipboard}
@@ -74,7 +74,7 @@ const WhatWeDo = () => {
             families transition from
             homelessness to permanent
             housing."
-            link="/services/4"
+            link="/services/2"
           />
         </div>
       </div>

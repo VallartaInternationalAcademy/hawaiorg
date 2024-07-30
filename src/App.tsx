@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <Route path="stories" element={<StoriesPage />} />
           <Route path="story/:id" element={<StoryDetailPage />} />
           <Route path="services/:id" element={<ServicePageLayout />} />
-          <Route path="page_no_found/" element={<NotFoundPage />} />
+          <Route path="page_no_found" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Router>
