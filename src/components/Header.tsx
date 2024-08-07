@@ -109,7 +109,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link to="what-do-we-do" className="sub-menu-item">
-                What Do We Do
+                What We Do
               </Link>
             </li>
             <li className="has-submenu parent-parent-menu-item">
