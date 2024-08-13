@@ -132,18 +132,13 @@ const Header: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"services/4"} className="sub-menu-item">
-                    Healthcare
+                  <Link to={"services/2"} className="sub-menu-item">
+                    Housing Retention
                   </Link>
                 </li>
                 <li>
                   <Link to={"services/3"} className="sub-menu-item">
-                    Medical Respite And Recuperative Care
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"services/2"} className="sub-menu-item">
-                    Shelter and Support
+                    Rapid Rehousing and Homeless Prevention
                   </Link>
                 </li>
               </ul>

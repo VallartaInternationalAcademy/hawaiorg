@@ -37,7 +37,7 @@ const WhatWeDo = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row flex-row justify-content-center">
           <ServiceCard
             Icon={BsHouse}
             service="Housing Navigation"
@@ -49,32 +49,15 @@ const WhatWeDo = () => {
           />
           <ServiceCard
             Icon={PiHeartbeat}
-            service="Healthcare"
-            descripcion="Providing access to
-            essential healthcare
-            services to ensure the
-            well-being of individuals
-            and families."
-            link="/services/4"
+            service="Housing Retention"
+            descripcion="Housing Retention provides ongoing support to help households maintain stability and prevent future homelessness"
+            link="/services/2"
           />
           <ServiceCard
             Icon={CiMedicalClipboard}
-            service="Medical Respite and Recuperative Care"
-            descripcion="Offering a safe place for
-            homeless individuals to
-            recover and receive medical
-            care after hospital discharge."
+            service="Rapid Rehousing and Homeless Prevention"
+            descripcion="This service assists families in quickly securing stable housing and preventing homelessness through tailored support and resource coordination"
             link="/services/3"
-          />
-          <ServiceCard
-            Icon={PiHandshake}
-            service="Shelter and Support"
-            descripcion="Providing temporary shelter and
-            comprehensive support to help
-            families transition from
-            homelessness to permanent
-            housing."
-            link="/services/2"
           />
         </div>
       </div>

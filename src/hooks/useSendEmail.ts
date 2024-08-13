@@ -23,7 +23,7 @@ const useEmail = (): UseEmailResult => {
     try {
       await emailjs.send(
         "service_vk9y9hh", // reemplaza con tu service_id
-        "template_ptq9vvn", // reemplaza con tu template_id
+        "template_9ztg2gk", // reemplaza con tu template_id
         templateParams,
         "Vh6ITFRS82UfLXqtx" // reemplaza con tu user_id
       );

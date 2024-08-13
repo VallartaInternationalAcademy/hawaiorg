@@ -1,12 +1,12 @@
 import HeroPage from "../../components/Hero/HeroPage";
 import { useParams } from "react-router-dom";
 import { getDataByid } from "../../data/Services";
-import { FaBrain, FaRecycle } from "react-icons/fa6";
-import { FaHeartbeat, FaShieldAlt } from "react-icons/fa";
-import sevice1 from "../../assets/images/charity/service1.png";
 import { IconType } from "react-icons";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import { useEffect } from "react";
+import HeroServices from "../../components/Hero/HeroServices";
+import Subservices from "../../components/Services/Subservices";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 interface Props {
   Icon: IconType;
@@ -30,71 +30,57 @@ const ServicePageLayout = () => {
     return <div>Item not found</div>;
   }
 
-  const ServiceCardInfo = ({ Icon, tittle, description }: Props) => {
-    return (
-      <div className="col-md-3 col-6 my-2">
-        <Icon size={50} className="text-primary" />
-        <h5>{tittle}</h5>
-        <p className="text-muted">{description}</p>
-      </div>
-    );
-  };
-
   return (
     <div>
-      <HeroPage
+      <HeroServices
+        Title={item.Service}
         imagen={item.MainImage}
-        page={item.Tittle}
         description={item.MainDescripcion}
-        Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
+      <Subservices services={item.services} />
       <section className="section">
         <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <div className="section-title mb-4 pb-2">
-                <h4 className="title text-primary">{item.Service}</h4>
+          <div className="row align-items-center">
+            <div className="col-lg-6 col-md-6">
+              <div className="about-left">
+                <div className="position-relative shadow p-2 rounded bg-white-color img-one">
+                  <img
+                    src={item.serviceImage}
+                    className="img-fluid rounded"
+                    alt="work-image"
+                  />
+                </div>
+
+                <div className="img-two shadow rounded-3 overflow-hidden p-2 bg-white-color">
+                  <img
+                    src={item.subImage}
+                    className="img-fluid rounded-3"
+                    alt="work-image"
+                  />
+                </div>
               </div>
             </div>
-            <div className="col-12 text-justify">
-              <span className="text-muted">{item.text}</span>
-            </div>
-            <div className="col-md-12 text-center mt-4">
-              <img src={item.subImage} className="img-fluid rounded-3" alt="" />
+
+            <div className="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <div className="section-title ms-lg-5">
+                <h4 className="title mb-4">{item.Tittle}</h4>
+                <p className="text-muted">{item.MainDescripcion}</p>
+                <ul className="list-unstyled text-muted">
+                  {item.benefits &&
+                    item.benefits.map((benefit, index) => (
+                      <li key={index} className="mb-1">
+                        <span className="text-primary h5 me-2">
+                          <FaRegCheckCircle className="align-middle text-success" />
+                        </span>
+                        {benefit}
+                      </li>
+                    ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 text-center">
-            <div className="section-title mb-4 pb-2">
-              <span className="text-primary">{item.Service}</span>
-              <h4 className="title">HOW IS IT DONE?</h4>
-            </div>
-          </div>
-          <div className="col-12 text-center">
-            <div className="row justify-content-center">
-              {item.services.map((s) => (
-                <ServiceCardInfo
-                  Icon={s.Icon}
-                  description={s.description}
-                  tittle={s.title}
-                />
-              ))}
-            </div>
-            <div className="row justify-content-center my-5">
-              <div className="col-md-6 col-12">
-                <img
-                  src={item.serviceImage}
-                  alt="Central Image"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

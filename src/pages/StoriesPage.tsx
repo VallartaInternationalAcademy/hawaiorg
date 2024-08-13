@@ -1,59 +1,22 @@
 import React from "react";
 import HeroPage from "../components/Hero/HeroPage";
 import storiesImage from "../assets/images/charity/cause04.jpg";
-import storie1 from "../assets/images/hawai/STORIES (3).png";
-import storie2 from "../assets/images/hawai/STORIES (4).png";
-import storie3 from "../assets/images/hawai/STORIES (5).png";
-import storie4 from "../assets/images/hawai/STORIES (6).png";
 import BlogCard from "../components/cards/BlogCard";
 import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";
+import { getHistories, HistoryType } from "../data/Histories";
 
-interface StoriesType {
-  imagen: string;
-  titulo: string;
-  descripcion: string;
-  nombre: string;
-  HistoryLink: string;
-}
-
-const Stories: StoriesType[] = [
-  {
-    imagen: storie1,
-    titulo: "Titulo De La Historia",
-    descripcion:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aut rerum ad ducimus. Officiis, repellendus.",
-    nombre: "Alan Cunningham",
-    HistoryLink: "Storie1",
-  },
-  {
-    imagen: storie2,
-    titulo: "Titulo De La Historia",
-    descripcion:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aut rerum ad ducimus. Officiis, repellendus.",
-    nombre: "Alan Cunningham",
-    HistoryLink: "Storie2",
-  },
-  {
-    imagen: storie3,
-    titulo: "Titulo De La Historia",
-    descripcion:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aut rerum ad ducimus. Officiis, repellendus.",
-    nombre: "Alan Cunningham",
-    HistoryLink: "Storie3",
-  },
-  {
-    imagen: storie4,
-    titulo: "Titulo De La Historia",
-    descripcion:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aut rerum ad ducimus. Officiis, repellendus.",
-    nombre: "Alan Cunningham",
-    HistoryLink: "Storie4",
-  },
-];
+const histories: HistoryType[] = getHistories();
 
 const StoriesPage = () => {
   useScrollToTop();
+  const truncateText = (texto: string) => {
+    const maxLength = 100;
+    if (texto.length > maxLength) {
+      return texto.substring(0, maxLength) + "...";
+    }
+    return texto;
+  };
   return (
     <div>
       <HeroPage
@@ -74,14 +37,14 @@ const StoriesPage = () => {
                 </h4>
               </div>
             </div>
-            {Stories.map((s) => (
+            {histories.map((s, index) => (
               <BlogCard
-                HistoryLink="/story/1"
-                descripcion={s.descripcion}
-                imagen={s.imagen}
-                nombre={s.nombre}
-                titulo={s.titulo}
-                key={s.HistoryLink}
+                HistoryLink={`/story/${s.id}`}
+                descripcion={truncateText(s.texto)}
+                imagen={s.image}
+                nombre={s.title}
+                titulo={s.title}
+                key={index}
               />
             ))}
           </div>

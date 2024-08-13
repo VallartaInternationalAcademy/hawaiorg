@@ -1,0 +1,162 @@
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .whatsapp-button img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .whatsapp-chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px; /* Aumentado el tamaño del chat */
+    max-width: 90%;
+    background-color: #E5DDD5;
+    border-radius: 15px; /* Más redondeado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-header {
+    padding: 15px; /* Aumentado el padding */
+    background-color: #075E54;
+    color: #ffffff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .profile-status {
+    font-size: 12px;
+    color: #d4f4dc;
+  }
+  
+  .chat-header button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    background-image: url('https://w0.peakpx.com/wallpaper/744/548/HD-wallpaper-whatsapp-ma-doodle-pattern-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+  }
+  
+  .typing-indicator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .typing-indicator .dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    background-color: #075E54;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
+  }
+  
+  .typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes blink {
+    0%, 80%, 100% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+  }
+  
+  .bot-message {
+    background-color: #DCF8C6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .chat-footer {
+    display: flex;
+    padding: 15px; /* Aumentado el padding */
+    background-color: #FFFFFF;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .chat-footer input {
+    flex: 1;
+    padding: 10px; /* Aumentado el padding */
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Más redondeado */
+    margin-right: 10px;
+  }
+  
+  .chat-footer button {
+    background-color: #25D366;
+    color: #ffffff;
+    border: none;
+    padding: 10px; /* Aumentado el padding */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chat-footer button img {
+    width: 20px;
+    height: 20px;
+  }
+  

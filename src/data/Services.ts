@@ -27,7 +27,7 @@ import serviceImage2 from "../assets/images/charity/service2.png";
 import serviceImage3 from "../assets/images/charity/service3.png";
 import serviceImage4 from "../assets/images/charity/service4.png";
 
-interface cardInfo {
+export interface cardInfo {
   title: string;
   Icon: IconType;
   description: string;
@@ -43,42 +43,48 @@ interface ServiceType {
   subImage: string;
   serviceImage: string;
   services: cardInfo[];
+  benefits?: string[];
 }
 
 const Services: ServiceType[] = [
   {
     id: "1",
     MainImage: MainImage1,
-    Tittle: "GUIDING FAMILIES HOME",
+    Tittle: "Find Your Way Home",
     MainDescripcion:
-      "Helping homeless families find stable and secure housing through personalized guidance and support.",
+      "Housing Navigation helps homeless families find stable and secure housing by guiding them through every step of the process.",
     Service: "HOUSING NAVIGATION",
-    text: "Housing Navigation plays a crucial role in assisting homeless families by guiding them through the complex journey of finding stable and secure housing options. Our dedicated team provides comprehensive support throughout every step of the housing search process, starting from assessing individual needs and preferences to actively identifying suitable housing opportunities. We offer expert guidance and practical assistance during lease negotiations and the finalization of contracts, ensuring that families transition into safe and sustainable living environments with confidence and support",
+    text: "We guide homeless families every step of the way to secure stable and safe housing. Through personalized support, we connect them with the resources they need, helping them overcome barriers and transition from homelessness to permanent housing. Our approach ensures that each family finds a place they can call home, with less stress and more confidence in their future.",
+    benefits: [
+      "Expand Your Options",
+      "Tailored Guidance",
+      "Stress-Free Process",
+    ],
     subImage: subImage1,
     serviceImage: serviceImage4,
     services: [
       {
-        title: "Needs Assessment",
+        title: "Knowledge of Housing Resources:",
         description:
-          "Assess each family's housing needs and preferences comprehensively.",
+          "Understanding available housing options and programs to connect families with safe, affordable housing.",
         Icon: FaTasks,
       },
       {
-        title: "Resource Connection",
+        title: "Advocacy Skills:",
         description:
-          "Connect families with housing assistance programs and resources",
+          "Advocating for clients, negotiating with landlords, and overcoming barriers like discrimination or eviction.",
         Icon: CiLink,
       },
       {
-        title: "Search Support",
+        title: "Networking:",
         description:
-          "Aid in actively searching for suitable and affordable housing",
+          "Building relationships with landlords and agencies to increase housing opportunities for families.",
         Icon: HiOutlineMagnifyingGlass,
       },
       {
-        title: "Advisory",
+        title: "Documentation and Record-Keeping:",
         description:
-          "Provide advice and support during lease negotiations and signing.",
+          "Maintaining accurate records of housing searches, applications, and client interactions for tracking progress.",
         Icon: SiWechat,
       },
     ],
@@ -86,35 +92,37 @@ const Services: ServiceType[] = [
   {
     id: "2",
     MainImage: MainImage2,
-    Tittle: "SHELTERING HOPE",
+    Tittle: "Stay Secure, Stay Safe",
     MainDescripcion:
-      "Providing Safe Havens and Comprehensive Support for Families in Need",
-    Service: "SHELTER AND SUPPORT",
-    text: "Providing temporary shelter and comprehensive support to help families transition from homelessness to permanent housing is a critical initiative. Our program offers a safe and stable environment wherefamilies can find respite and support during their journey towards securing sustainable housing solutions.Beyond shelter, we provide personalized case management to address immediate needs, offer access to educational and vocational resources, and facilitate connections to community services. By fostering a supportive network and empowering families with the tools and resources they need, we aim to ensure asmooth and successful transition, ultimately helping them rebuild their lives with dignity and security",
+      "Housing Retention provides ongoing support to help households maintain stability and prevent future homelessness.",
+    Service: "HOUSING RETENTION",
+    text: "Our Housing Retention service is dedicated to keeping families securely housed, providing continuous support to maintain stability. We work closely with families to address any issues that may threaten their housing, offering crisis intervention when needed, and empowering them with the skills necessary for long-term independence. Our goal is to ensure that once families find housing, they can stay there, living securely and safely.",
+    benefits: ["Ensure Stability", "Crisis Response", "Build Independence"],
     subImage: subImage2,
     serviceImage: serviceImage2,
     services: [
       {
-        title: "Temporary Shelter",
-        description: "Offer safe and comfortable temporary housing.",
+        title: "Supportive Services:",
+        description:
+          "Offering ongoing assistance with budgeting, resource access, and conflict resolution to maintain housing stability.",
         Icon: GiCampingTent,
       },
       {
-        title: "Case Management",
+        title: "Crisis Intervention:",
         description:
-          "Provide individualized case management services to address immediate needs.",
+          "Responding swiftly to crises like job loss or emergencies to prevent housing instability.",
         Icon: FaUserGear,
       },
       {
-        title: "Support Services",
+        title: "Follow-Up and Monitoring:",
         description:
-          "Deliver meals, hygiene facilities, and access to educational and vocational resources.",
+          "Regular check-ins to assess housing situations, resolve issues, and prevent housing loss.",
         Icon: FaHandsHelping,
       },
       {
-        title: "Housing Transition",
+        title: "Empowerment and Skill-Building:",
         description:
-          "Assist families in securing permanent housing through navigation and support services.",
+          "Helping households develop skills and resources for long-term housing stability and independence.",
         Icon: BsHouses,
       },
     ],
@@ -122,70 +130,38 @@ const Services: ServiceType[] = [
   {
     id: "3",
     MainImage: MainImage3,
-    Tittle: "RESTORING HEALTH WITH DIGNITY",
+    Tittle: "Prevent Homelessness, Fast",
     MainDescripcion:
-      "Providing a safe place for homeless individuals to recover and receive medical care after hospital discharge",
-    Service: "MEDICAL RESPITE AND \n RECUPERATIVE CARE",
-    text: "Providing a safe place for homeless individuals to recover and receive medical care after hospital discharge is a vital service known as Medical Respite and Recuperative Care. This program offers a compassionate and supportive environment where individuals experiencing homelessness can heal from medical conditions or surgeries. Our dedicated team ensures that each person receives personalized care tailored to their recovery needs, including access to necessary medical treatments, therapies, and rehabilitation services. Beyond physical recovery, we prioritize emotional well-being by fostering a nurturing atmosphere that promotes healing and stability. Through comprehensive case management, we facilitate a seamless transition from medical respite to ongoing healthcare services and, ultimately, to sustainable housin solution",
+      "This service assists families in quickly securing stable housing and preventing homelessness through tailored support and resource coordination",
+    Service: "RAPID REHOUSING AND HOMELESS PREVENTION",
+    text: "Rapid Rehousing and Homeless Prevention services are designed to quickly address the housing needs of families facing homelessness. By providing fast, tailored interventions, we help families secure stable housing and prevent them from falling into homelessness. We also focus on long-term solutions, ensuring that families can maintain their housing and avoid future crises.",
     subImage: subImage3,
     serviceImage: serviceImage3,
+    benefits: ["Quick Solutions", "Personalized Plans", "Lasting Stability"],
     services: [
       {
-        title: "Safe Environment",
-        description: "Ensure a safe and supportive recovery environment.",
+        title: "Assessment and Case Management:",
+        description:
+          "Developing personalized housing plans and ongoing case management to secure and maintain stability.",
         Icon: IoShieldCheckmarkOutline,
       },
       {
-        title: "Medical Care",
-        description: "Administer essential medical treatments and therapies",
+        title: "Housing Navigation:",
+        description:
+          "Using knowledge of resources to help households find safe, affordable housing options.",
         Icon: CiMedicalCross,
       },
       {
-        title: "Case Management",
+        title: "Resource Coordination:",
         description:
-          "Provide personalized care coordination for a smooth transition to stable housing.",
+          "Coordinating with providers to meet clients’ needs in healthcare, mental health, and employment.",
         Icon: FaUserGear,
       },
       {
-        title: "Recovery Support",
+        title: "Problem-Solving:",
         description:
-          "Offer social services and support for recuperation and well- being",
+          "Overcoming barriers to housing stability with creative, effective solutions.",
         Icon: MdOutlineSupportAgent,
-      },
-    ],
-  },
-  {
-    id: "4",
-    MainImage: MainImage4,
-    Tittle: "HEALTHCARE SERVICE",
-    MainDescripcion:
-      "Providing essential healthcare services to homeless families and individuals for physical and mental wellness.",
-    Service: "HEALTHCARE SERVICE",
-    text: "We ensure that homeless families and individuals have access to essential healthcare services, addressing both their physical and mental well-being. Our comprehensive healthcare initiatives encompass initial medical assessments to identify urgent health needs, continuous medical care through partnerships with clinics and mobile health services, specialized psychological support to address mental health challenges, and the implementation of preventive health education programs to promote long-term wellness. These efforts aim to safeguard the health of our community members,providing vital care and support to those most in need",
-    subImage: subImage4,
-    serviceImage: serviceImage1,
-    services: [
-      {
-        title: "Medical Assessments",
-        description:
-          "Conduct initial medical evaluations to identify urgent health needs.",
-        Icon: CiMedicalCase,
-      },
-      {
-        title: "Ongoing Medical Care",
-        description:
-          "Provide continuous access to care through clinics and mobile services",
-        Icon: FiRefreshCcw,
-      },
-      {
-        title: "Psychological Support",
-        description: "Offer mental health services and emotional support",
-        Icon: MdOutlinePsychology,
-      },
-      {
-        title: "Prevention Programs",
-        description: "Implement health education to promote healthy habits.",
-        Icon: FaUserCheck,
       },
     ],
   },

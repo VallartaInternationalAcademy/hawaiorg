@@ -6,16 +6,46 @@ import { Link } from "react-router-dom";
 import { IoMdSend } from "react-icons/io";
 import useEmail from "../hooks/useSendEmail";
 import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import Swal from "sweetalert2";
+
+const validationSchema = Yup.object({
+  email: Yup.string()
+    .email("El email no es válido")
+    .required("El email es requerido"),
+  message: Yup.string().required("El mensaje es requerido"),
+});
 
 const Footer = () => {
   const { sendEmail, loading, error } = useEmail();
-  const [toEmail, setToEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await sendEmail(toEmail, message);
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      message: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      await sendEmail(values.email, values.message);
+      if (!error) {
+        Swal.fire({
+          title: "Formulario Enviado",
+          text: `El Mensaje fue enviado correctamente`,
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+        formik.resetForm();
+      } else {
+        Swal.fire({
+          title: "Error",
+          text: `Error al enviar el mensaje`,
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      }
+    },
+  });
   return (
     <footer className="footer">
       <div className="container">
@@ -64,37 +94,49 @@ const Footer = () => {
                 <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                   <h5 className="footer-head">Contact Us</h5>
                   {/* contact form */}
-                  <ul className="list-unstyled footer-list mt-4">
-                    <li>
-                      <label htmlFor="email">Email:</label>
-                      <input
-                        className="form-control"
-                        type="email"
-                        id="email"
-                        required
-                        onChange={(e) => setToEmail(e.target.value)}
-                      />
-                    </li>
-                    <li>
-                      <label htmlFor="message">Message:</label>
-                      <textarea
-                        className="form-control"
-                        id="message"
-                        required
-                        onChange={(e) => setMessage(e.target.value)}
-                      ></textarea>
-                    </li>
-                    <li>
-                      <button
-                        className="btn btn-light mt-3"
-                        onClick={(e) => handleSubmit(e)}
-                      >
-                        {loading ? "Loading" : "Send"}
-                        <IoMdSend className="text-muted my-auto" />
-                      </button>
-                    </li>
-                  </ul>
-                  {error && <p>{error}</p>}
+                  <form onSubmit={formik.handleSubmit}>
+                    <ul className="list-unstyled footer-list mt-4">
+                      <li>
+                        <label htmlFor="email">Email:</label>
+                        <input
+                          className="form-control"
+                          id="email"
+                          name="email"
+                          type="email"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.email}
+                        />
+                        {formik.touched.email && formik.errors.email ? (
+                          <div className="text-danger">
+                            {formik.errors.email}
+                          </div>
+                        ) : null}
+                      </li>
+                      <li>
+                        <label htmlFor="message">Mensaje:</label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          name="message"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.message}
+                        />
+                        {formik.touched.message && formik.errors.message ? (
+                          <div className="text-danger">
+                            {formik.errors.message}
+                          </div>
+                        ) : null}
+                      </li>
+                      <li>
+                        <button className="btn btn-light mt-3">
+                          {loading ? "Enviando..." : "Send"}
+                          <IoMdSend className="text-muted my-auto" />
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
                 </div>
                 {/* redes sociales */}
                 <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
