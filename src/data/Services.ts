@@ -1,12 +1,10 @@
 import { IconType } from "react-icons";
-import MainImage1 from "../assets/images/hawai/HousingNavigation2.png";
-import MainImage2 from "../assets/images/hawai/SHELTER AND SUPPORT.png";
-import MainImage3 from "../assets/images/hawai/RECUPERATIVE CARE.png";
-import MainImage4 from "../assets/images/hawai/HEALTHCARE2.png";
-import subImage1 from "../assets/images/hawai/HousingNavigation.png";
-import subImage2 from "../assets/images/hawai/SHELTER AND SUPPORT (2).png";
-import subImage3 from "../assets/images/hawai/RECUPERATIVE CARE (2).png";
-import subImage4 from "../assets/images/hawai/HEALTHCARE.png";
+import MainImage1 from "../assets/images/hawai/Services/HousingNavigation.png";
+import MainImage2 from "../assets/images/hawai/Services/HousingRetention.png";
+import MainImage3 from "../assets/images/hawai/Services/RAPID_REHOUSING_AND_HOMELESS_PREVENTION.png";
+import subImage1 from "../assets/images/hawai/Services/HousingNavigation2.png";
+import subImage2 from "../assets/images/hawai/Services/HousingRetention2.png";
+import subImage3 from "../assets/images/hawai/Services/RapidRehousing2.png";
 import { FaUsersViewfinder, FaHandshakeSimple } from "react-icons/fa6";
 import { GoLaw } from "react-icons/go";
 import { FaNetworkWired, FaHandshake } from "react-icons/fa";
@@ -19,10 +17,9 @@ import {
 import { RiUserFollowLine } from "react-icons/ri";
 import { BsHouses, BsHouseCheck } from "react-icons/bs";
 
-import serviceImage1 from "../assets/images/charity/service1.png";
-import serviceImage2 from "../assets/images/charity/service2.png";
-import serviceImage3 from "../assets/images/charity/service3.png";
-import serviceImage4 from "../assets/images/charity/service4.png";
+import serviceImage2 from "../assets/images/hawai/Services/HousingRetention3.png";
+import serviceImage3 from "../assets/images/hawai/Services/RapidRehousing3.png";
+import serviceImage4 from "../assets/images/hawai/Services/HousingNavigation3.png";
 
 export interface cardInfo {
   title: string;
@@ -50,7 +47,7 @@ const Services: ServiceType[] = [
     Tittle: "Find Your Way Home",
     MainDescripcion:
       "We provide homeless families with comprehensive guidance throughout the housing search process, ensuring they find stable and secure housing. Our team offers personalized support, from identifying opportunities to negotiating leases, making the transition to permanent housing smoother and more successful.",
-    Service: "HOUSING *NAVIGATION*",
+    Service: "HOUSING \n *NAVIGATION*",
     text: "We guide homeless families every step of the way to secure stable and safe housing. Through personalized support, we connect them with the resources they need, helping them overcome barriers and transition from homelessness to permanent housing. Our approach ensures that each family finds a place they can call home, with less stress and more confidence in their future.",
     benefits: [
       "Expand Your Options",

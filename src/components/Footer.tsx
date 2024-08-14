@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
 });
 
 const Footer = () => {
-  const { sendEmail, loading, error } = useEmail();
+  const { loading, error, sendEmail } = useEmail();
 
   const formik = useFormik({
     initialValues: {

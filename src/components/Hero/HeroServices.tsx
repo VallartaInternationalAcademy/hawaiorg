@@ -32,24 +32,27 @@ const HeroServices = ({ Title, imagen, description }: propsHeroServices) => {
     ));
   };
   return (
-    <section
-      className="bg-consulting d-flex align-items-center"
-      style={{ background: `url(${imagen}) top` }}
-    >
-      <div className="container z-1">
-        <div className="row">
-          <div className="col-md-6 background">
-            <div className="title-heading pe-lg-5 pe-md-4">
-              {/* <span className="badge text-bg-primary mb-2">Consulting</span> */}
-              <h1 className="heading fw-bold mb-3 mb-md-5 pb-md-5">
-                {formatText(Title)}
-              </h1>
-              <p className="para-desc text-muted">{description}</p>
-            </div>
-          </div>
+    <div className="container-fluid">
+      <div className="row align-items-center">
+        <div className="mt-5  col-md-7 p-5 px-5">
+          <h1 className="fw-bold mb-3 mt-5 pb-md-3">{formatText(Title)}</h1>
+          <p className="text-muted pr-5">
+            We offer ongoing, tailored support to help families maintain their
+            housing stability and avoid future homelessness. By providing
+            resources and assistance to address challenges, we ensure that
+            families can remain securely housed and continue building a stable,
+            independent future.
+          </p>
+        </div>
+        <div className="col-md-5 p-0">
+          <img
+            src={imagen}
+            className="img-fluid w-100 h-100 object-fit-cover"
+            alt="Housing Retention"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
