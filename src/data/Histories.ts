@@ -48,3 +48,7 @@ export const getHistoryById = (id: string) => {
 export const getHistories = () => {
   return histories;
 };
+
+export const getRandomHistories = (limit: number) => {
+  return histories.sort(() => Math.random() - Math.random()).slice(0, limit);
+};

@@ -3553,36 +3553,36 @@ p {
   background-position: center center;
 }
 
-.bg-consulting {
-  height: 100vh;
-  background-size: cover !important;
-  -ms-flex-item-align: center;
-      align-self: center;
-  position: relative !important;
-  background-position: center center;
-}
-
-@media (max-width: 767px) {
   .bg-consulting {
-    padding: 0 0 300px;
-    height: auto;
+    height: 100vh;
+    background-size: cover !important;
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: relative !important;
+    background-position: center center;
   }
-  .bg-consulting .background {
-    padding: 120px 12px 50px;
-    background: #ffffff;
+
+  @media (max-width: 767px) {
+    .bg-consulting {
+      padding: 0 0 300px;
+      height: auto;
+    }
+    .bg-consulting .background {
+      padding: 120px 12px 50px;
+      background: #ffffff;
+    }
   }
-}
-@media (min-width: 768px) {
-  .bg-consulting:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: #ffffff;
+  @media (min-width: 768px) {
+    .bg-consulting:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: #ffffff;
+    }
   }
-}
 .bg-circle-gradiant {
   background: radial-gradient(circle at 50% 50%, rgba(22, 163, 74, 0.1) 0%, rgba(22, 163, 74, 0.1) 33.333%, rgba(22, 163, 74, 0.2) 33.333%, rgba(22, 163, 74, 0.2) 66.666%, rgba(22, 163, 74, 0.3) 66.666%, rgba(22, 163, 74, 0.3) 99.999%);
 }

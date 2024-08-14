@@ -1,6 +1,11 @@
 import logo from "../assets/images/logoLigth.png";
-// react icons social medias
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+  FaFacebookF,
+} from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoMdSend } from "react-icons/io";
@@ -144,20 +149,26 @@ const Footer = () => {
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
                       <Link to={"#"} className="text-foot">
-                        <FaFacebookF className="pe-2" />
-                        Facebook
+                        <FaFacebookF className="pe-2 fs-3" />
+                        <span className="fw-bold">Facebook</span>
                       </Link>
                     </li>
                     <li>
                       <Link to={"#"} className="text-foot">
-                        <FaInstagram className="pe-2" />
-                        Instagram
+                        <FaInstagram className="pe-2 fs-3" />
+                        <span className="fw-bold">Instagram</span>
                       </Link>
                     </li>
                     <li>
                       <Link to={"#"} className="text-foot">
-                        <FaTwitter className="pe-2" />
-                        Twitter
+                        <FaXTwitter className="pe-2 fs-3" />
+                        <span className="fw-bold">X</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={"#"} className="text-foot">
+                        <FaYoutube className="pe-2 fs-3" />
+                        <span className="fw-bold">Youtube</span>
                       </Link>
                     </li>
                   </ul>

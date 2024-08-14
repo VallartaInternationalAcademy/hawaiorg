@@ -1,8 +1,3 @@
-import React from "react";
-import imagenHistoria from "../../assets/images/charity/g6.jpg";
-import imagenHistoria1 from "../../assets/images/charity/g3.jpg";
-import imagenHistoria2 from "../../assets/images/charity/g5.jpg";
-import imagenHistoria3 from "../../assets/images/charity/g7.jpg";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import { useParams } from "react-router-dom";
 import { getHistoryById } from "../../data/Histories";
@@ -21,6 +16,7 @@ const StoryDetailPage = () => {
       </p>
     ));
   };
+
   return (
     <section className="section">
       <div className="section">

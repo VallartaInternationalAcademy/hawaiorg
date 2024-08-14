@@ -70,7 +70,7 @@ const ServicePageLayout = () => {
                     item.benefits.map((benefit, index) => (
                       <li key={index} className="mb-1">
                         <span className="text-primary h5 me-2">
-                          <FaRegCheckCircle className="align-middle text-success" />
+                          <FaRegCheckCircle className="align-middle text-main" />
                         </span>
                         {benefit}
                       </li>

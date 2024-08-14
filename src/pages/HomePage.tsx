@@ -22,6 +22,7 @@ import g10 from "../assets/images/hawai/g8.png";
 
 const HomePage: React.FC = () => {
   const images = [g2, g3, g4, g5, g6, g7, g8, g9, g10];
+
   useScrollToTop();
   return (
     <div>

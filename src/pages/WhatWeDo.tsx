@@ -41,22 +41,19 @@ const WhatWeDo = () => {
           <ServiceCard
             Icon={BsHouse}
             service="Housing Navigation"
-            descripcion="Assisting homeless
-            families in finding stable
-            and secure housing
-            options"
+            descripcion="We guide families through the entire housing process, from searching to securing stable, long-term housing."
             link="/services/1"
           />
           <ServiceCard
             Icon={PiHeartbeat}
             service="Housing Retention"
-            descripcion="Housing Retention provides ongoing support to help households maintain stability and prevent future homelessness"
+            descripcion="We offer continuous support to help families maintain housing stability and prevent future homelessness."
             link="/services/2"
           />
           <ServiceCard
             Icon={CiMedicalClipboard}
             service="Rapid Rehousing and Homeless Prevention"
-            descripcion="This service assists families in quickly securing stable housing and preventing homelessness through tailored support and resource coordination"
+            descripcion="We provide quick interventions to secure housing for families and prevent them from becoming homeless."
             link="/services/3"
           />
         </div>

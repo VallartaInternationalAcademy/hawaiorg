@@ -2,8 +2,17 @@ import HistoryCard from "../components/cards/HistoryCard";
 import perfil1 from "../assets/images/hawai/STORIES.png";
 import perfil2 from "../assets/images/hawai/STORIES (3).png";
 import perfil3 from "../assets/images/hawai/STORIES (5).png";
+import { getRandomHistories } from "../data/Histories";
 
 const Histories = () => {
+  const histories = getRandomHistories(3);
+  const truncateText = (texto: string) => {
+    const maxLength = 200;
+    if (texto.length > maxLength) {
+      return texto.substring(0, maxLength) + "...";
+    }
+    return texto;
+  };
   return (
     <div className="container mt-60">
       <div className="row justify-content-center">
@@ -18,39 +27,14 @@ const Histories = () => {
       </div>
 
       <div className="row">
-        <HistoryCard
-          tittle="Samuel Parsons"
-          img={perfil1}
-          history="Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor
-            incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt"
-        />
-        <HistoryCard
-          tittle="Samuel Parsons"
-          img={perfil2}
-          history="Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor
-            incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt"
-        />
-        <HistoryCard
-          tittle="Samuel Parsons"
-          img={perfil3}
-          history="Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor
-            incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt"
-        />
+        {histories.map((history) => (
+          <HistoryCard
+            key={history.id}
+            img={history.image}
+            history={truncateText(history.texto)}
+            tittle={history.title}
+          />
+        ))}
       </div>
     </div>
   );
