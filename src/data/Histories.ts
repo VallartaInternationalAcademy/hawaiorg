@@ -1,6 +1,6 @@
 import img1 from "../assets/images/hawai/STORIES (3).png";
-import img2 from "../assets/images/hawai/STORIES (4).png";
-import img3 from "../assets/images/hawai/STORIES (5).png";
+import img2 from "../assets/images/hawai/John's Path to Stability.png";
+import img3 from "../assets/images/hawai/The Diaz Family’s Story.png";
 import img4 from "../assets/images/hawai/STORIES (6).png";
 
 export interface HistoryType {

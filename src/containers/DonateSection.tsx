@@ -16,8 +16,9 @@ const DonateSection = () => {
               <div className="section-title">
                 <h4 className="title mb-4">Make a Donation</h4>
                 <p className="mb-0 text-muted">
-                  Your $40.00 monthly donation can give 12 people clean water
-                  every year. 100% funds water projects.
+                  Your donation can change lives by providing essential
+                  resources to those in need. Every contribution makes a
+                  difference.
                 </p>
               </div>
 

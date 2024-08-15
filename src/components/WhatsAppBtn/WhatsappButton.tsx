@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCheckDouble, FaRegPaperPlane } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/hawai/Perfil.png";
 
 const WhatsAppButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,19 +15,22 @@ const WhatsAppButton: React.FC = () => {
   const handleToggleChat = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
-      setIsTyping(true);
-      setTimeout(() => {
-        setIsTyping(false);
-        setBotMessage("Hola, ¿En qué puedo ayudarte?");
-        setMessages([
-          ...messages,
-          {
-            name: "HAWAI ORG",
-            text: "Hola, ¿En qué puedo ayudarte?",
-            time: getCurrentTime(),
-          },
-        ]);
-      }, 2000);
+      // solo lo tiene que hacer una vez
+      if (messages.length === 0) {
+        setIsTyping(true);
+        setTimeout(() => {
+          setIsTyping(false);
+          setBotMessage("Hello, how can we help you?");
+          setMessages([
+            ...messages,
+            {
+              name: "HAWAI ORG",
+              text: "Hello, how can we help you?",
+              time: getCurrentTime(),
+            },
+          ]);
+        }, 2000);
+      }
     }
   };
 
@@ -107,7 +110,7 @@ const WhatsAppButton: React.FC = () => {
           <div className="chat-footer">
             <input
               type="text"
-              placeholder="Escribe un mensaje..."
+              placeholder="Write a message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />

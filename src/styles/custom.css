@@ -6604,6 +6604,13 @@ html[dir=rtl] .tns-visually-hidden {
   max-width: 250px;
 }
 
+/* cuando sea pala celular bottom tiene que ser 20% */
+@media (max-width: 425px) {
+  .about-left .img-two {
+    bottom: -45%;
+  }
+}
+
 .about-right {
   display: -webkit-box;
   display: -ms-flexbox;

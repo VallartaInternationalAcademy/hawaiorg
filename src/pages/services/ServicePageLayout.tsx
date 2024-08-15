@@ -61,7 +61,7 @@ const ServicePageLayout = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+            <div className="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-5 pt-sm-0">
               <div className="section-title ms-lg-5">
                 <h4 className="title mb-4">{item.Tittle}</h4>
                 <p className="text-muted">{item.MainDescripcion}</p>
