@@ -16,10 +16,8 @@ import * as Yup from "yup";
 import Swal from "sweetalert2";
 
 const validationSchema = Yup.object({
-  email: Yup.string()
-    .email("El email no es válido")
-    .required("El email es requerido"),
-  message: Yup.string().required("El mensaje es requerido"),
+  email: Yup.string().email("Email is invalid").required("Email is required"),
+  message: Yup.string().required("The message is required"),
 });
 
 const Footer = () => {
@@ -35,8 +33,8 @@ const Footer = () => {
       await sendEmail(values.email, values.message);
       if (!error) {
         Swal.fire({
-          title: "Formulario Enviado",
-          text: `El Mensaje fue enviado correctamente`,
+          title: "Form Submitted",
+          text: `Thank you for contacting us. We will get back to you soon.`,
           icon: "success",
           confirmButtonText: "OK",
         });
@@ -44,7 +42,7 @@ const Footer = () => {
       } else {
         Swal.fire({
           title: "Error",
-          text: `Error al enviar el mensaje`,
+          text: `There was an error sending the email. Please try again later.`,
           icon: "error",
           confirmButtonText: "OK",
         });
@@ -119,7 +117,7 @@ const Footer = () => {
                         ) : null}
                       </li>
                       <li>
-                        <label htmlFor="message">Mensaje:</label>
+                        <label htmlFor="message">Message:</label>
                         <textarea
                           className="form-control"
                           id="message"
@@ -136,7 +134,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <button className="btn btn-light mt-3">
-                          {loading ? "Enviando..." : "Send"}
+                          {loading ? "Sending..." : "Send"}
                           <IoMdSend className="text-muted my-auto" />
                         </button>
                       </li>
