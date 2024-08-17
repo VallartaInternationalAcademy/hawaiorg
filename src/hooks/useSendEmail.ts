@@ -1,44 +1,47 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import axios from "axios";
 
-interface UseEmailResult {
-  sendEmail: (toEmail: string, message: string) => Promise<void>;
-  loading: boolean;
-  error: string | null;
-}
+const useSendMail = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
 
-const useEmail = (): UseEmailResult => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const sendEmail = async (toEmail: string, message: string) => {
+  const sendMail = async ({
+    subject,
+    text,
+  }: {
+    subject: string;
+    text: string;
+  }) => {
     setLoading(true);
     setError(null);
-
-    const templateParams = {
-      to_email: toEmail,
-      message: message,
-    };
+    setSuccess(false);
 
     try {
-      await emailjs.send(
-        "service_vk9y9hh", // reemplaza con tu service_id
-        "template_9ztg2gk", // reemplaza con tu template_id
-        templateParams,
-        "Vh6ITFRS82UfLXqtx" // reemplaza con tu user_id
+      const response = await axios.post(
+        "https://emailsender-via.up.railway.app/api/mail/send",
+        {
+          to: "angel@dsmconsulting.mx", // Email fijo
+          subject,
+          text,
+        }
       );
-      setLoading(false);
+
+      setSuccess(true);
+      return response.data;
     } catch (err) {
-      setError("Failed to send email");
+      setError(
+        (err as any).response
+          ? (err as any).response.data
+          : "Error sending email"
+      );
+      setSuccess(false);
+    } finally {
       setLoading(false);
     }
   };
 
-  return {
-    sendEmail,
-    loading,
-    error,
-  };
+  return { sendMail, loading, error, success };
 };
 
-export default useEmail;
+export default useSendMail;

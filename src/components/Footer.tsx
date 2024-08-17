@@ -21,7 +21,7 @@ const validationSchema = Yup.object({
 });
 
 const Footer = () => {
-  const { loading, error, sendEmail } = useEmail();
+  const { loading, error, sendMail, success } = useEmail();
 
   const formik = useFormik({
     initialValues: {
@@ -30,7 +30,10 @@ const Footer = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-      await sendEmail(values.email, values.message);
+      await sendMail({
+        subject: `Contact form from ${values.email}`,
+        text: values.message,
+      });
       if (!error) {
         Swal.fire({
           title: "Form Submitted",
