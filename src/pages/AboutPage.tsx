@@ -10,33 +10,18 @@ import useScrollToTop from "../hooks/useScrollToTop";
 const team: profile[] = [
   {
     imagen: unamed,
-    nombre: "Mildred Garza",
-    puesto: "CEO",
+    nombre: "Sonia Davalos",
+    puesto: "Executive Director",
   },
   {
     imagen: unamed,
-    nombre: "Gavin Lynch",
-    puesto: "CEO",
+    nombre: "Robert Zuckerman",
+    puesto: "Associate Director ",
   },
   {
     imagen: unamed,
-    nombre: "Barbara Kelley",
-    puesto: "CEO",
-  },
-  {
-    imagen: unamed,
-    nombre: "Howard Roberson",
-    puesto: "CEO",
-  },
-  {
-    imagen: unamed,
-    nombre: "Jayden Peterson",
-    puesto: "CEO",
-  },
-  {
-    imagen: unamed,
-    nombre: "Billy Vega",
-    puesto: "CEO",
+    nombre: "Sara Villanueva",
+    puesto: "Staff Accountant",
   },
 ];
 
@@ -68,7 +53,6 @@ const AboutPage = () => {
           <StrategicSection />
         </section>
       </section>
-      <DonateSection />
     </div>
   );
 };

@@ -10,6 +10,8 @@ import StoriesPage from "./pages/StoriesPage";
 import ServicePageLayout from "./pages/services/ServicePageLayout";
 import StoryDetailPage from "./pages/stories/StoryDetailPage";
 import NotFoundPage from "./pages/notFoundPage";
+import ContactPage from "./pages/ContactPage";
+import DonationPage from "./pages/DonatePage";
 
 const App: React.FC = () => {
   return (
@@ -20,9 +22,11 @@ const App: React.FC = () => {
           <Route path="about" element={<AboutPage />} />
           <Route path="what-do-we-do" element={<WhatWeDo />} />
           <Route path="stories" element={<StoriesPage />} />
+          <Route path="Contact" element={<ContactPage />} />
           <Route path="story/:id" element={<StoryDetailPage />} />
           <Route path="services/:id" element={<ServicePageLayout />} />
           <Route path="page_no_found" element={<NotFoundPage />} />
+          <Route path="donation" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Router>

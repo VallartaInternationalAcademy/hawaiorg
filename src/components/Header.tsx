@@ -82,10 +82,7 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
             >
               <div className="btn">
-                <Link
-                  to={"page_no_found/"}
-                  className="btn btn-primary rounded-5"
-                >
+                <Link to={"donation/"} className="btn btn-primary rounded-5">
                   DONATE
                 </Link>
               </div>
@@ -147,6 +144,11 @@ const Header: React.FC = () => {
             <li>
               <Link to="stories" className="sub-menu-item">
                 Stories
+              </Link>
+            </li>
+            <li>
+              <Link to="Contact" className="sub-menu-item">
+                Contact
               </Link>
             </li>
           </ul>

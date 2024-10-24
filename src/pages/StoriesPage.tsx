@@ -50,7 +50,6 @@ const StoriesPage = () => {
           </div>
         </div>
       </section>
-      <DonateSection />
     </div>
   );
 };

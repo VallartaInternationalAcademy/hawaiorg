@@ -9,49 +9,8 @@ import {
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoMdSend } from "react-icons/io";
-import useEmail from "../hooks/useSendEmail";
-import { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import Swal from "sweetalert2";
-
-const validationSchema = Yup.object({
-  email: Yup.string().email("Email is invalid").required("Email is required"),
-  message: Yup.string().required("The message is required"),
-});
 
 const Footer = () => {
-  const { loading, error, sendMail, success } = useEmail();
-
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      message: "",
-    },
-    validationSchema,
-    onSubmit: async (values) => {
-      await sendMail({
-        subject: `Contact form from ${values.email}`,
-        text: values.message,
-      });
-      if (!error) {
-        Swal.fire({
-          title: "Form Submitted",
-          text: `Thank you for contacting us. We will get back to you soon.`,
-          icon: "success",
-          confirmButtonText: "OK",
-        });
-        formik.resetForm();
-      } else {
-        Swal.fire({
-          title: "Error",
-          text: `There was an error sending the email. Please try again later.`,
-          icon: "error",
-          confirmButtonText: "OK",
-        });
-      }
-    },
-  });
   return (
     <footer className="footer">
       <div className="container">
@@ -97,53 +56,6 @@ const Footer = () => {
                   </ul>
                 </div>
 
-                <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <h5 className="footer-head">Contact Us</h5>
-                  {/* contact form */}
-                  <form onSubmit={formik.handleSubmit}>
-                    <ul className="list-unstyled footer-list mt-4">
-                      <li>
-                        <label htmlFor="email">Email:</label>
-                        <input
-                          className="form-control"
-                          id="email"
-                          name="email"
-                          type="email"
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                          value={formik.values.email}
-                        />
-                        {formik.touched.email && formik.errors.email ? (
-                          <div className="text-danger">
-                            {formik.errors.email}
-                          </div>
-                        ) : null}
-                      </li>
-                      <li>
-                        <label htmlFor="message">Message:</label>
-                        <textarea
-                          className="form-control"
-                          id="message"
-                          name="message"
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                          value={formik.values.message}
-                        />
-                        {formik.touched.message && formik.errors.message ? (
-                          <div className="text-danger">
-                            {formik.errors.message}
-                          </div>
-                        ) : null}
-                      </li>
-                      <li>
-                        <button className="btn btn-light mt-3">
-                          {loading ? "Sending..." : "Send"}
-                          <IoMdSend className="text-muted my-auto" />
-                        </button>
-                      </li>
-                    </ul>
-                  </form>
-                </div>
                 {/* redes sociales */}
                 <div className="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                   <h5 className="footer-head">Social Media</h5>
@@ -186,7 +98,7 @@ const Footer = () => {
             <div className="col-sm-6">
               <div className="text-sm-start">
                 <p className="mb-0">
-                  © Corazon Hawaii. All Rights Reserved 2023
+                  © Corazon Hawaii. All Rights Reserved 2024
                 </p>
               </div>
             </div>

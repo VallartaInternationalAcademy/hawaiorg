@@ -13,11 +13,6 @@ const Layout: React.FC = () => {
         <Outlet />
       </main>
       <Footer />
-      <WhatsAppButton />
-      <Link to={"/page_no_found"} className="donate-now-btn">
-        {/* Aquí puedes reemplazar el emoji por un icono de alguna librería si prefieres */}
-        💖 Donate Now
-      </Link>
     </div>
   );
 };

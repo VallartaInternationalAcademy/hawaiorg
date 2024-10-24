@@ -64,7 +64,6 @@ const WhatWeDo = () => {
       <section className="section">
         <Estaditics />
       </section>
-      <DonateSection />
     </div>
   );
 };

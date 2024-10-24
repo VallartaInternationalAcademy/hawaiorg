@@ -152,9 +152,9 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Donate Banner */}
-      <section className="section">
+      {/* <section className="section">
         <DonateSection />
-      </section>
+      </section>    */}
 
       {/* HISTORIES */}
       <div className="mb-5">
