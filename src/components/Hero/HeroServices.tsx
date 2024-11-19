@@ -37,11 +37,11 @@ const HeroServices = ({ Title, imagen, description }: propsHeroServices) => {
         <div className="mt-5  col-md-7 p-5 px-5">
           <h1 className="fw-bold mb-3 mt-5 pb-md-3">{formatText(Title)}</h1>
           <p className="text-muted pr-5">
-            We offer ongoing, tailored support to help families maintain their
+            We offer ongoing, tailored support to help households maintain their
             housing stability and avoid future homelessness. By providing
             resources and assistance to address challenges, we ensure that
-            families can remain securely housed and continue building a stable,
-            independent future.
+            households can remain securely housed and continue building a
+            stable, independent future.
           </p>
         </div>
         <div className="col-md-5 p-0">

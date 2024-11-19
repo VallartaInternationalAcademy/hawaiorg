@@ -19,8 +19,8 @@ const AboutSection = () => {
                 </h4>
                 <p className="text-muted">
                   At{" "}
-                  <span className="text-primary fw-bold">Corazon Hawaii</span> ,
-                  our mission is to empower homeless families to rebuild their
+                  <span className="text-primary fw-bold">Corazon Hawaii</span>,
+                  our mission is to empower homeless households to rebuild their
                   lives and reconnect with their community. Through
                   comprehensive housing services and advocacy, we provide
                   essential support to break down barriers to housing and foster
@@ -31,7 +31,7 @@ const AboutSection = () => {
                   united community. With dedication and compassion, we strive to
                   make this vision a reality. Join us in creating a brighter
                   future where homelessness is a thing of the past, and every
-                  family can thrive. Together, we can build a community where
+                  household can thrive. Together, we can build a community where
                   everyone has the chance to flourish and contribute to a better
                   tomorrow
                 </p>

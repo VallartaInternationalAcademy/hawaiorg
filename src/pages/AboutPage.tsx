@@ -32,7 +32,8 @@ const AboutPage = () => {
       <HeroPage
         imagen={aboutUsImage}
         page="ABOUT US"
-        description="Empowering families, building futures: Join us in making homelessness a thing of the past."
+        description='Our name, "Corazon," translates to "heart" in Spanish, reflecting the deep compassion and unwavering commitment that drives our efforts to support and uplift our community. Choosing the name "Corazon" was a deliberate and meaningful decision. It symbolizes the heart and soul we put into our work, the love and care we extend to each family we serve, and the belief that a community united by compassion can achieve great things.
+'
         Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <section className="section">

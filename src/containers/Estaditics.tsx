@@ -16,7 +16,7 @@ interface Detail {
 const EstatdictisDetail: Detail[] = [
   {
     Icon: MdOutlineFamilyRestroom,
-    Tittle: "Families Housed",
+    Tittle: "households Housed",
     number: "2102+",
   },
   {
@@ -69,15 +69,15 @@ const Estaditics = () => {
               <span className="text-primary">OUR IMPACT</span>
               <h4 className="title mb-4">
                 TRANSFORMING LIVES <br />
-                <span className="text-primary">ONE FAMILY AT A TIME</span>
+                <span className="text-primary">ONE HOUSEHOLD AT A TIME</span>
               </h4>
               <p className="text-muted">
                 Through our dedicated efforts and community support, we've made
-                a significant difference in the lives of homeless families. See
-                the impact of our work in numbers.
+                a significant difference in the lives of homeless households.
+                See the impact of our work in numbers.
               </p>
             </div>
-            <div className="row">
+            {/* <div className="row">
               {EstatdictisDetail.map((d, index) => (
                 <EstadisticCard
                   key={index}
@@ -86,7 +86,7 @@ const Estaditics = () => {
                   number={d.number}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-md-6">

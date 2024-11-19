@@ -31,21 +31,6 @@ const HomePage: React.FC = () => {
       <div className="container">
         <div className="row">
           <FeatureCard
-            icon={PiTargetDuotone}
-            title="Our Vision"
-            text="Our mission is to
-            empower homeless
-            families to rebuild their
-            lives and reconnect with
-            their community. We
-            provide comprehensive
-            support through housing
-            services and advocacy
-            to foster lasting change
-            and remove barriers to
-            housing.."
-          />
-          <FeatureCard
             icon={BsEye}
             title="Our Mission"
             text="Our vision is a future
@@ -60,18 +45,25 @@ const HomePage: React.FC = () => {
             by a united community."
           />
           <FeatureCard
+            icon={PiTargetDuotone}
+            title="Our Vision"
+            text="Our mission is to
+            empower homeless
+            households to rebuild their
+            lives and reconnect with
+            their community. We
+            provide comprehensive
+            support through housing
+            services and advocacy
+            to foster lasting change
+            and remove barriers to
+            housing."
+          />
+
+          <FeatureCard
             icon={RiHandHeartLine}
             title="Our Goal"
-            text="Our objective is to create
-            a sustainable system
-            that ensures all homeless
-            individuals can access
-            safe, stable housing.
-            Through accessible
-            housing programs,
-            personalized services,
-            and strategic
-            partnerships"
+            text="Our goal is to develop a sustainable system that guarantees safe, stable housing for all households experiencing homelessness. This will be achieved through accessible housing programs, tailored support services, and collaborative partnerships."
           />
         </div>
       </div>
@@ -93,31 +85,35 @@ const HomePage: React.FC = () => {
                 </h4>
 
                 <p className="text-muted mb-0">
-                  Corazon Hawaii is a nonprofit organization that helps
-                  toempower homeless households to rebuild their lives,
-                  rediscover their identities, and reconnect with their
-                  community. <br /> <br />
+                  Corazon Hawaii is a nonprofit organization that helps to
+                  empower homeless households to rebuild their lives, rediscover
+                  their identities, and reconnect with their community.
+                  <br /> <br />
                   Corazon Hawaii will walk alongside homeless households on
-                  their journey toward well-being a word defined as the state of
-                  being happy, healthy, or prosperous which is aligned with the
-                  State of Hawaii Department of Human Services Ohana Nui. Ohana
-                  Nui is a proven approach that capitalizes on Hawaii’sunique
-                  multigenerational family structure and provides a framework
-                  for human service delivery that positions whole families for a
-                  chance at greater well-being. Translated as extended or large
-                  family, Ohana Nui is an adaptation of the national
-                  two-generation approach. Corazon Hawaii will help homeless
-                  households focus on theirfuture, through housing navigation,
-                  housing retention, and housing stabilization. We connect
-                  households with housingwhile providing wraparound services to
-                  increase their opportunities to build the skills and
-                  confidence to change their circumstances for good. <br />{" "}
+                  their journey toward well-being, a word defined as the state
+                  of being happy, healthy, or prosperous which is aligned with
+                  the State of Hawaii Department of Human Services Ohana Nui.
+                  Ohana Nui is a proven approach that capitalizes on Hawaii’s
+                  unique multigenerational family structure and provides a
+                  framework for human service delivery that positions whole
+                  families for a chance at greater well-being. Translated as
+                  extended or large family, Ohana Nui is an adaptation of the
+                  national two-generation approach.
+                  <br />
+                  <br />
+                  Corazon Hawaii will help homeless households focus on their
+                  future, through housing navigation, housing retention, and
+                  housing stabilization. We connect households with housing
+                  while providing wraparound services to increase their
+                  opportunities to build the skills and confidence to change
+                  their circumstances for good.
+                  <br />
                   <br />
                   We believe in community that allows all people an equal chance
                   to live a full life and until that happens, Corazon Hawaii
                   will continue to be their voice for systemic change. Through
-                  ourservices, active advocacy, fundraising initiatives, and our
-                  culture of ingrained respect, we will bring an end to
+                  our services, active advocacy, fundraising initiatives, and
+                  our culture of ingrained respect, we will bring an end to
                   homelessness in our community.
                 </p>
 

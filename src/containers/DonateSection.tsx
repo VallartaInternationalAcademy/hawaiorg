@@ -1,8 +1,36 @@
-import React from "react";
 import banner from "../assets/images/hawai/bg4.png";
-import { Link } from "react-router-dom";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import axios from "axios";
+import { useState } from "react";
 
 const DonateSection = () => {
+  const [amount, setAmount] = useState(0);
+  const stripe = useStripe();
+  const elements = useElements();
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!stripe || !elements) return;
+
+    const { data } = await axios.post(
+      "https://corazonhawaii.org:5000/create-payment-intent",
+      { amount }
+    );
+    const clientSecret = data.clientSecret;
+
+    const paymentResult = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement)!,
+      },
+    });
+
+    if (paymentResult.error) {
+      setMessage(`Error: ${paymentResult.error.message}`);
+    } else if (paymentResult.paymentIntent?.status === "succeeded") {
+      setMessage("¡Donación exitosa! Gracias por tu apoyo.");
+    }
+  };
   return (
     <section
       className="bg-cta"
@@ -22,68 +50,76 @@ const DonateSection = () => {
                 </p>
               </div>
 
-              <form className="mt-4">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="mb-3">
-                      <label className="form-label small fw-bold">
-                        Your Name :{" "}
-                      </label>
-                      <input
-                        name="name"
-                        id="name"
-                        type="text"
-                        className="form-control"
-                        placeholder="Your Name :"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="mb-3">
-                      <label className="form-label small fw-bold">
-                        {" "}
-                        Your Mail :{" "}
-                      </label>
-                      <input
-                        name="email"
-                        id="email"
-                        type="email"
-                        className="form-control"
-                        placeholder="Your Mail :"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="mb-3">
-                      <label className="form-label small fw-bold">
-                        Phone No. :{" "}
-                      </label>
-                      <input
-                        name="number"
-                        type="number"
-                        className="form-control"
-                        id="number2"
-                        placeholder="Phone :"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 mt-3">
-                    <Link
-                      to={"page_no_found/"}
-                      id="donatefund"
-                      className="btn btn-primary"
+              <form onSubmit={handleSubmit}>
+                {/* botones de cantidades predeterminadas 10, 20, 50, 100 */}
+                <div className="mb-3">
+                  <label className="form-label">Select Amount</label>
+                  <div className="d-flex gap-2">
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(10)}
                     >
-                      Donate Now
-                    </Link>
+                      $10
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(20)}
+                    >
+                      $20
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(50)}
+                    >
+                      $50
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(100)}
+                    >
+                      $100
+                    </button>
                   </div>
                 </div>
+                <div className="mb-3">
+                  <label htmlFor="amount" className="form-label">
+                    Donation Amount (USD)
+                  </label>
+                  <input
+                    type="number"
+                    id="amount"
+                    className="form-control"
+                    placeholder="Enter amount"
+                    value={amount}
+                    onChange={(e) => setAmount(Number(e.target.value))}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Card Details</label>
+                  <div className="border p-2 rounded">
+                    <CardElement options={{ hidePostalCode: true }} />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100"
+                  disabled={!stripe}
+                >
+                  Donate
+                </button>
+                {message && (
+                  <div className="alert alert-success mt-3" role="alert">
+                    {message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
-          ¿
         </div>
       </div>
     </section>

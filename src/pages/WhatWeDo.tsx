@@ -7,8 +7,8 @@ import { PiHeartbeat, PiHandshake } from "react-icons/pi";
 import { CiMedicalClipboard } from "react-icons/ci";
 import HowDoItSection from "../containers/HowDoItSection";
 import Estaditics from "../containers/Estaditics";
-import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";
+import { MdOutlineHandshake } from "react-icons/md";
 
 const WhatWeDo = () => {
   useScrollToTop();
@@ -17,7 +17,7 @@ const WhatWeDo = () => {
       <HeroPage
         imagen={wdwdImage}
         page="MAKING A DIFFERENCE"
-        description="Empowering families, building futures: Join us in making homelessness a thing of the past."
+        description="Empowering households, building futures: Join us in making homelessness a thing of the past."
         Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <div className="container mt-100 mt-60">
@@ -29,31 +29,37 @@ const WhatWeDo = () => {
               </h4>
               <p className="text-muted para-desc mb-0 mx-auto">
                 At Corazon Hawaii, we provide comprehensive support to homeless
-                families and individuals, helping them achieve stability and
+                individuals and families, helping them achieve stability and
                 rebuild their lives with dignity and hope. Our dedicated team
                 ensures that each person receives the care and assistance they
-                need for lasting change.
+                need for lasting change.
               </p>
             </div>
           </div>
         </div>
         <div className="row flex-row justify-content-center">
           <ServiceCard
+            Icon={MdOutlineHandshake}
+            service="Family Assessment Center"
+            descripcion="We provide immediate temporary housing for families in need, helping them quickly transition to stable, permanent housing."
+            link="/services/4"
+          />
+          <ServiceCard
             Icon={BsHouse}
             service="Housing Navigation"
-            descripcion="We guide families through the entire housing process, from searching to securing stable, long-term housing."
+            descripcion="We guide households through the entire housing process, from searching to securing stable, long-term housing."
             link="/services/1"
           />
           <ServiceCard
             Icon={PiHeartbeat}
             service="Housing Retention"
-            descripcion="We offer continuous support to help families maintain housing stability and prevent future homelessness."
+            descripcion="We offer continuous support to help households maintain housing stability and prevent future homelessness."
             link="/services/2"
           />
           <ServiceCard
             Icon={CiMedicalClipboard}
             service="Rapid Rehousing and Homeless Prevention"
-            descripcion="We provide quick interventions to secure housing for families and prevent them from becoming homeless."
+            descripcion="We provide quick interventions to secure housing for households and prevent them from becoming homeless."
             link="/services/3"
           />
         </div>

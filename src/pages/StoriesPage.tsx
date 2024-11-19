@@ -22,7 +22,7 @@ const StoriesPage = () => {
       <HeroPage
         imagen={storiesImage}
         page="STORIES OF TRANSFORMATION"
-        description="Discover inspiring stories of change and resilience from individuals and families supported by Corazon Hawaii.."
+        description="Discover inspiring stories of change and resilience from individuals and households supported by Corazon Hawaii."
         Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
 

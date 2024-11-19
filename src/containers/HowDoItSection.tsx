@@ -16,22 +16,22 @@ const AboutSection = () => {
                   At{" "}
                   <span className="text-primary fw-bold">Corazon Hawaii</span> ,
                   we utilize a comprehensive approach that addresses the diverse
-                  needs of homeless families, providing support in key areas
+                  needs of homeless households, providing support in key areas
                   such as housing, health, and education. We work closely with
                   other organizations, government agencies, and the broader
                   community to create a robust support network that offers
-                  resources and opportunities to families. We develop
-                  personalized action plans for each family, tailoring our
+                  resources and opportunities to households. We develop
+                  personalized action plans for each household, tailoring our
                   services to meet their specific needs and helping them achieve
                   long-term stability. We are committed to advocating for
                   policies and practices that eliminate structural barriers to
                   housing and improve access to essential resources for homeless
-                  families. We promote independence and self-sufficiency through
-                  educational and skill development programs, helping families
-                  acquire the necessary tools to rebuild their lives.
+                  households. We promote independence and self-sufficiency
+                  through educational and skill development programs, helping
+                  households acquire the necessary tools to rebuild their lives.
                   Additionally, we implement a continuous monitoring and
                   evaluation system to measure the impact of our programs and
-                  continually improve our services
+                  continually improve our services.
                 </p>
               </div>
             </div>

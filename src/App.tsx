@@ -26,7 +26,7 @@ const App: React.FC = () => {
           <Route path="story/:id" element={<StoryDetailPage />} />
           <Route path="services/:id" element={<ServicePageLayout />} />
           <Route path="page_no_found" element={<NotFoundPage />} />
-          <Route path="donation" element={<NotFoundPage />} />
+          <Route path="donation" element={<DonationPage />} />
         </Route>
       </Routes>
     </Router>
