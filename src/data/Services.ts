@@ -2,24 +2,28 @@ import { IconType } from "react-icons";
 import MainImage1 from "../assets/images/hawai/Services/HousingNavigation.png";
 import MainImage2 from "../assets/images/hawai/Services/HousingRetention.png";
 import MainImage3 from "../assets/images/hawai/Services/RAPID_REHOUSING_AND_HOMELESS_PREVENTION.png";
+import MainImage4 from "../assets/images/hawai/Services/Fac.jpg";
 import subImage1 from "../assets/images/hawai/Services/HousingNavigation2.png";
 import subImage2 from "../assets/images/hawai/Services/HousingRetention2.png";
 import subImage3 from "../assets/images/hawai/Services/RapidRehousing2.png";
 import { FaUsersViewfinder, FaHandshakeSimple } from "react-icons/fa6";
 import { GoLaw } from "react-icons/go";
 import { FaNetworkWired, FaHandshake } from "react-icons/fa";
-import { IoDocumentTextOutline } from "react-icons/io5";
 import {
   MdCrisisAlert,
   MdOutlineAssessment,
   MdOutlineAutoFixHigh,
+  MdOutlineSupportAgent,
 } from "react-icons/md";
-import { RiUserFollowLine } from "react-icons/ri";
+import { RiCommunityLine, RiUserFollowLine } from "react-icons/ri";
 import { BsHouses, BsHouseCheck } from "react-icons/bs";
+import { HiOutlineLightBulb } from "react-icons/hi";
 
 import serviceImage2 from "../assets/images/hawai/Services/HousingRetention3.png";
 import serviceImage3 from "../assets/images/hawai/Services/RapidRehousing3.png";
 import serviceImage4 from "../assets/images/hawai/Services/HousingNavigation3.png";
+import serviceImage5 from "../assets/images/hawai/Services/Fac2.png";
+import { AiOutlineFileSearch } from "react-icons/ai";
 
 export interface cardInfo {
   title: string;
@@ -159,39 +163,44 @@ const Services: ServiceType[] = [
   },
   {
     id: "4",
-    MainImage: MainImage3,
-    Tittle: "Family Assessment Center",
+    MainImage: MainImage4,
+    Tittle:
+      "Family Assessment Center: Stability and Support for Your Household",
     MainDescripcion:
-      "We provide immediate temporary housing for families in need, helping them quickly transition to stable, permanent housing.",
+      "At the Family Assessment Center, we are dedicated to providing personalized and ongoing support to help families maintain housing stability and avoid the risks of homelessness. Our tailored approach focuses on understanding your unique needs and challenges, connecting you to vital resources, and empowering you to build a stable, independent future.",
     Service: "Family Assessment Center",
     text: "The Family Assessment Center (FAC) uses a Housing First (HF) approach to provide immediate temporary housing for families in need, helping them quickly transition to stable, permanent housing. FAC removes barriers, assists with housing searches, and connects families to income, benefits, and community resources for stability. There are no entry requirements like sobriety or treatment completion. Staff support families in creating housing plans, gathering documents, securing income, and finding housing, while also offering training in tenancy skills. The HF model has minimal rules, with discharges only for serious safety issues.",
-    subImage: subImage3,
-    serviceImage: serviceImage3,
-    benefits: ["Quick Solutions", "Personalized Plans", "Lasting Stability"],
+    subImage: serviceImage3,
+    serviceImage: serviceImage5,
+    benefits: [
+      "Housing Stability",
+      "Comprehensive Support",
+      "Long-term Independence",
+    ],
     services: [
+      {
+        title: "Crisis Intervention and Advocacy:",
+        description:
+          "Our team offers immediate support during crises, advocating for families to access necessary resources and navigate complex systems with ease.",
+        Icon: MdOutlineSupportAgent,
+      },
+      {
+        title: "Resource and Referral Services:",
+        description:
+          "We connect families to community-based resources, including childcare, healthcare, employment assistance, and educational programs, to build a solid foundation for stability.",
+        Icon: RiCommunityLine,
+      },
+      {
+        title: "Skills Development and Education:",
+        description:
+          "Through workshops and one-on-one sessions, we empower families with financial literacy, parenting skills, and job readiness, fostering independence and resilience.",
+        Icon: HiOutlineLightBulb,
+      },
       {
         title: "Assessment and Case Management:",
         description:
-          "Developing personalized housing plans and ongoing case management to secure and maintain stability.",
-        Icon: MdOutlineAssessment,
-      },
-      {
-        title: "Housing Navigation:",
-        description:
-          "Using knowledge of resources to help households find safe, affordable housing options.",
-        Icon: BsHouseCheck,
-      },
-      {
-        title: "Resource Coordination:",
-        description:
-          "Coordinating with providers to meet clients’ needs in healthcare, mental health, and employment.",
-        Icon: FaHandshakeSimple,
-      },
-      {
-        title: "Problem-Solving:",
-        description:
-          "Overcoming barriers to housing stability with creative, effective solutions.",
-        Icon: MdOutlineAutoFixHigh,
+          "We create personalized family plans and provide ongoing case management to address unique challenges, ensuring every household can secure and sustain stable housing.",
+        Icon: AiOutlineFileSearch,
       },
     ],
   },

@@ -14,7 +14,7 @@ const DonateSection = () => {
     if (!stripe || !elements) return;
 
     const { data } = await axios.post(
-      "https://corazonhawaii.org:5000/create-payment-intent",
+      "https://backend.corazonhawaii.org/create-payment-intent",
       { amount }
     );
     const clientSecret = data.clientSecret;
@@ -29,6 +29,9 @@ const DonateSection = () => {
       setMessage(`Error: ${paymentResult.error.message}`);
     } else if (paymentResult.paymentIntent?.status === "succeeded") {
       setMessage("¡Donación exitosa! Gracias por tu apoyo.");
+      // Clear the form
+      setAmount(0);
+      elements.getElement(CardElement)!.clear();
     }
   };
   return (

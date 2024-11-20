@@ -31,8 +31,8 @@ const HomePage: React.FC = () => {
       <div className="container">
         <div className="row">
           <FeatureCard
-            icon={BsEye}
-            title="Our Mission"
+            icon={PiTargetDuotone}
+            title="Our Vision"
             text="Our vision is a future
             where everyone has a
             safe, dignified home and
@@ -45,8 +45,8 @@ const HomePage: React.FC = () => {
             by a united community."
           />
           <FeatureCard
-            icon={PiTargetDuotone}
-            title="Our Vision"
+            icon={BsEye}
+            title="Our Mission"
             text="Our mission is to
             empower homeless
             households to rebuild their
