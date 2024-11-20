@@ -35,7 +35,7 @@ const AboutSection = () => {
                   everyone has the chance to flourish and contribute to a better
                   tomorrow
                 </p>
-                <Link to={"/page_no_found"} className="btn btn-primary mt-3">
+                <Link to={"/donation"} className="btn btn-primary mt-3">
                   Donate Now
                 </Link>
               </div>

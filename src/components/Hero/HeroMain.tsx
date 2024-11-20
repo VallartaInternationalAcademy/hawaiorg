@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
               </p>
               <div className="mt-4">
                 <Link
-                  to={"page_no_found/"}
+                  to={"donation/"}
                   className="btn btn-lg btn-primary rounded-pill mt-1 me-2"
                 >
                   Donate Now
