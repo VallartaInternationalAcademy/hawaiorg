@@ -42,7 +42,7 @@ const DonateSection = () => {
     >
       <div className="container">
         <div className="row justify-content-end">
-          <div className="col-lg-5 col-md-6 col-12">
+          <div className="col-lg-6 col-md-6 col-12">
             <div className="card p-4 border-0 rounded">
               <div className="section-title">
                 <h4 className="title mb-4">Make a Donation</h4>
@@ -58,13 +58,6 @@ const DonateSection = () => {
                 <div className="mb-3">
                   <label className="form-label">Select Amount</label>
                   <div className="d-flex gap-2">
-                    <button
-                      type="button"
-                      className="btn btn-outline-primary"
-                      onClick={() => setAmount(10)}
-                    >
-                      $10
-                    </button>
                     <button
                       type="button"
                       className="btn btn-outline-primary"
@@ -85,6 +78,20 @@ const DonateSection = () => {
                       onClick={() => setAmount(100)}
                     >
                       $100
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(500)}
+                    >
+                      $500
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-outline-primary"
+                      onClick={() => setAmount(1000)}
+                    >
+                      $1,000
                     </button>
                   </div>
                 </div>
