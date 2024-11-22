@@ -1,14 +1,13 @@
-import React from "react";
 import wdwdImage from "../assets/images/hawai/fondo2.jpg";
 import HeroPage from "../components/Hero/HeroPage";
 import ServiceCard from "../components/cards/ServiceCard";
-import { BsHouse } from "react-icons/bs";
-import { PiHeartbeat, PiHandshake } from "react-icons/pi";
+import CH_Icon from "../assets/images/hawai/CH_SVG-2.svg";
+import { PiHeartbeat } from "react-icons/pi";
 import { CiMedicalClipboard } from "react-icons/ci";
 import HowDoItSection from "../containers/HowDoItSection";
 import Estaditics from "../containers/Estaditics";
 import useScrollToTop from "../hooks/useScrollToTop";
-import { MdOutlineHandshake } from "react-icons/md";
+import { FaRegHandshake } from "react-icons/fa6";
 
 const WhatWeDo = () => {
   useScrollToTop();
@@ -39,13 +38,13 @@ const WhatWeDo = () => {
         </div>
         <div className="row flex-row justify-content-center">
           <ServiceCard
-            Icon={MdOutlineHandshake}
+            Icon={CH_Icon}
             service="Family Assessment Center"
             descripcion="We provide immediate temporary housing for families in need, helping them quickly transition to stable, permanent housing."
             link="/services/4"
           />
           <ServiceCard
-            Icon={BsHouse}
+            Icon={FaRegHandshake}
             service="Housing Navigation"
             descripcion="We guide households through the entire housing process, from searching to securing stable, long-term housing."
             link="/services/1"
