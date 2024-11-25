@@ -28,7 +28,7 @@ const DonateSection = () => {
     if (paymentResult.error) {
       setMessage(`Error: ${paymentResult.error.message}`);
     } else if (paymentResult.paymentIntent?.status === "succeeded") {
-      setMessage("¡Donación exitosa! Gracias por tu apoyo.");
+      setMessage("!Donation successful! Thank you for your donation!");
       // Clear the form
       setAmount(0);
       elements.getElement(CardElement)!.clear();
