@@ -1,11 +1,11 @@
 import { IconType } from "react-icons";
 import MainImage1 from "../assets/images/hawai/Services/HousingNavigation.png";
-import MainImage2 from "../assets/images/hawai/Services/HousingRetention.png";
-import MainImage3 from "../assets/images/hawai/Services/RAPID_REHOUSING_AND_HOMELESS_PREVENTION.png";
-import MainImage4 from "../assets/images/hawai/Services/Fac.jpg";
+import MainImage2 from "../assets/images/hawai/Services/HR1.png";
+import MainImage3 from "../assets/images/hawai/Services/RP1.png";
+import MainImage4 from "../assets/images/hawai/Services/fac.png";
 import subImage1 from "../assets/images/hawai/Services/HousingNavigation2.png";
-import subImage2 from "../assets/images/hawai/Services/HousingRetention2.png";
-import subImage3 from "../assets/images/hawai/Services/RapidRehousing2.png";
+import subImage2 from "../assets/images/hawai/Services/HR2.png";
+import subImage3 from "../assets/images/hawai/Services/RP2.png";
 import { FaUsersViewfinder, FaHandshakeSimple } from "react-icons/fa6";
 import { GoLaw } from "react-icons/go";
 import { FaNetworkWired, FaHandshake } from "react-icons/fa";
@@ -19,10 +19,11 @@ import { RiCommunityLine, RiUserFollowLine } from "react-icons/ri";
 import { BsHouses, BsHouseCheck } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi";
 
-import serviceImage2 from "../assets/images/hawai/Services/HousingRetention3.png";
-import serviceImage3 from "../assets/images/hawai/Services/RapidRehousing3.png";
+import serviceImage2 from "../assets/images/hawai/Services/HR3.png";
+import serviceImage3 from "../assets/images/hawai/Services/fac1.png";
+import ServiceCard4 from "../assets/images/hawai/Services/RP3.png";
 import serviceImage4 from "../assets/images/hawai/Services/HousingNavigation3.png";
-import serviceImage5 from "../assets/images/hawai/Services/Fac2.png";
+import serviceImage5 from "../assets/images/hawai/Services/fac2.png";
 import { AiOutlineFileSearch } from "react-icons/ai";
 
 export interface cardInfo {
@@ -128,7 +129,7 @@ const Services: ServiceType[] = [
     Service: "RAPID REHOUSING AND HOMELESS *PREVENTION*",
     text: "Rapid Rehousing and Homeless Prevention services are designed to quickly address the housing needs of households facing homelessness. By providing fast, tailored interventions, we help households secure stable housing and prevent them from falling into homelessness. We also focus on long-term solutions, ensuring that households can maintain their housing and avoid future crises.",
     subImage: subImage3,
-    serviceImage: serviceImage3,
+    serviceImage: ServiceCard4,
     benefits: [
       "Quick Solutions",
       "Personalized Housing Plans",

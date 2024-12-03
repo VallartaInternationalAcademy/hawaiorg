@@ -1,10 +1,9 @@
 import HeroPage from "../components/Hero/HeroPage";
-import aboutUsImage from "../assets/images/hawai/Home-About us.png";
+import aboutUsImage from "../assets/images/hawai/About.png";
 import AboutSection from "../containers/AboutSection";
 import TeamSection, { profile } from "../containers/TeamSection";
 import unamed from "../assets/images/logo.png";
 import StrategicSection from "../containers/StrategicSection";
-import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";
 
 const team: profile[] = [

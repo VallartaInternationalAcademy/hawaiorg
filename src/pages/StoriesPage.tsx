@@ -1,8 +1,7 @@
 import React from "react";
 import HeroPage from "../components/Hero/HeroPage";
-import storiesImage from "../assets/images/charity/cause04.jpg";
+import storiesImage from "../assets/images/hawai/Stories2.png";
 import BlogCard from "../components/cards/BlogCard";
-import DonateSection from "../containers/DonateSection";
 import useScrollToTop from "../hooks/useScrollToTop";
 import { getHistories, HistoryType } from "../data/Histories";
 

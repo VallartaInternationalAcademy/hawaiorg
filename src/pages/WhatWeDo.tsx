@@ -1,4 +1,4 @@
-import wdwdImage from "../assets/images/hawai/fondo2.jpg";
+import wdwdImage from "../assets/images/hawai/WhatWeDo.png";
 import HeroPage from "../components/Hero/HeroPage";
 import ServiceCard from "../components/cards/ServiceCard";
 import CH_Icon from "../assets/images/hawai/CH_SVG-2.svg";

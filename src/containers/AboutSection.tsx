@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/hawai/about us 2.jpg";
+import image from "../assets/images/hawai/About2.png";
 import { Link } from "react-router-dom";
 
 const AboutSection = () => {
