@@ -23,7 +23,6 @@ import serviceImage2 from "../assets/images/hawai/Services/HR3.png";
 import serviceImage3 from "../assets/images/hawai/Services/fac1.png";
 import ServiceCard4 from "../assets/images/hawai/Services/RP3.png";
 import serviceImage4 from "../assets/images/hawai/Services/HousingNavigation3.png";
-import serviceImage5 from "../assets/images/hawai/Services/fac2.png";
 import { AiOutlineFileSearch } from "react-icons/ai";
 
 export interface cardInfo {
@@ -172,7 +171,7 @@ const Services: ServiceType[] = [
     Service: "Family Assessment Center",
     text: "The Family Assessment Center (FAC) uses a Housing First (HF) approach to provide immediate temporary housing for families in need, helping them quickly transition to stable, permanent housing. FAC removes barriers, assists with housing searches, and connects families to income, benefits, and community resources for stability. There are no entry requirements like sobriety or treatment completion. Staff support families in creating housing plans, gathering documents, securing income, and finding housing, while also offering training in tenancy skills. The HF model has minimal rules, with discharges only for serious safety issues.",
     subImage: serviceImage3,
-    serviceImage: serviceImage5,
+    serviceImage: serviceImage4,
     benefits: [
       "Housing Stability",
       "Comprehensive Support",
