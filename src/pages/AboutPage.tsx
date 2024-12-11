@@ -25,7 +25,7 @@ const team: profile[] = [
   {
     imagen: unamed,
     nombre: "Deedee Teisina",
-    puesto: "Staff Accountant",
+    puesto: "Housing Retention Specialist",
   },
 ];
 
