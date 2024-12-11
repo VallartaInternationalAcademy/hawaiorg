@@ -22,6 +22,11 @@ const team: profile[] = [
     nombre: "Sara Villanueva",
     puesto: "Staff Accountant",
   },
+  {
+    imagen: unamed,
+    nombre: "Deedee Teisina",
+    puesto: "Staff Accountant",
+  },
 ];
 
 const AboutPage = () => {

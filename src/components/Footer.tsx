@@ -61,7 +61,8 @@ const Footer = () => {
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
                       <Link to={"services/4"} className="text-foot">
-                        <FaAngleRight className="me-1" /> FAC
+                        <FaAngleRight className="me-1" /> Family
+                        Assesment Center
                       </Link>
                     </li>
                     <li>

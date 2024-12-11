@@ -169,7 +169,7 @@ const ContactPage = () => {
                       please call us.
                     </p>
                     <a href="tel:+1-562-513-82-13" className="read-more">
-                      +1 562 513 82 13
+                      808 800 7477
                     </a>
                   </div>
                 </div>
