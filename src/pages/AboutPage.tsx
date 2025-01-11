@@ -24,6 +24,11 @@ const team: profile[] = [
   },
   {
     imagen: unamed,
+    nombre: "Brian Trigueros",
+    puesto: "Program Manager",
+  },
+  {
+    imagen: unamed,
     nombre: "Deedee Teisina",
     puesto: "Housing Retention Specialist",
   },
