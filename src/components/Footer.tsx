@@ -61,24 +61,50 @@ const Footer = () => {
                   <ul className="list-unstyled footer-list mt-4">
                     <li>
                       <Link to={"services/4"} className="text-foot">
-                        <FaAngleRight className="me-1" /> Family
-                        Assesment Center
+                        <div className="d-flex justify-content-start">
+                          <div>
+                            <FaAngleRight className="me-1" />
+                          </div>
+                          <div>
+                            Family Assesment Center
+                          </div>
+                        </div>
                       </Link>
                     </li>
                     <li>
                       <Link to={"service/1"} className="text-foot">
-                        <FaAngleRight className="me-1" /> Housing Navigation
+                        <div className="d-flex justify-content-start">
+                          <div>
+                            <FaAngleRight className="me-1"/>
+                          </div>
+                          <div>
+                            Housing Navigation
+                          </div>
+                        </div>
                       </Link>
                     </li>
                     <li>
                       <Link to={"service/2"} className="text-foot">
-                        <FaAngleRight className="me-1" /> Housing Retention
+                        <div className="d-flex justify-content-start">
+                          <div>
+                            <FaAngleRight className="me-1"/>
+                          </div>
+                          <div>
+                            Housing Retention
+                          </div>
+                        </div>
                       </Link>
                     </li>
                     <li>
                       <Link to={"service/3"} className="text-foot">
-                        <FaAngleRight className="me-1" /> Rapid Rehousing and
-                        Homeless Prevention
+                        <div className="d-flex justify-content-start">
+                          <div>
+                            <FaAngleRight className="me-1"/>
+                          </div>
+                          <div>
+                            Rapid Rehousing and Homeless Prevention
+                          </div>
+                        </div>
                       </Link>
                     </li>
                   </ul>
