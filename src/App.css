@@ -187,3 +187,9 @@
   width: 20px;
   height: 20px;
 }
+
+
+/* Custom Styles */
+#topnav .navigation-menu > li {
+  margin: 0 1px !important;
+}

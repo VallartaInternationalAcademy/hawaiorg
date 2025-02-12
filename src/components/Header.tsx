@@ -86,62 +86,62 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/about"
-                className={`sub-menu-item ${isActive("/about")}`}
+                  to="/about"
+                  className={`sub-menu-item ${isActive("/about")}`}
               >
                 About us
               </Link>
             </li>
             <li>
               <Link
-                to="/what-do-we-do"
-                className={`sub-menu-item ${isActive("/what-do-we-do")}`}
+                  to="/what-do-we-do"
+                  className={`sub-menu-item ${isActive("/what-do-we-do")}`}
               >
                 What We Do
               </Link>
             </li>
             <li className="has-submenu parent-parent-menu-item">
               <Link
-                to=""
-                className={`sub-menu-item ${isActive("")}`}
-                onClick={(e) => handleLinkClick(e, "javascript:void(0)")}
+                  to=""
+                  className={`sub-menu-item ${isActive("")}`}
+                  onClick={(e) => handleLinkClick(e, "javascript:void(0)")}
               >
                 Services
               </Link>
               <span className="menu-arrow"></span>
               <ul
-                className={`submenu ${
-                  subMenuOpen === "javascript:void(0)" ? "open" : ""
-                }`}
+                  className={`submenu ${
+                      subMenuOpen === "javascript:void(0)" ? "open" : ""
+                  }`}
               >
                 <li>
                   <Link
-                    to="/services/4"
-                    className={`sub-menu-item ${isActive("/services/4")}`}
+                      to="/services/4"
+                      className={`sub-menu-item ${isActive("/services/4")}`}
                   >
                     Family Assessment Center
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/services/1"
-                    className={`sub-menu-item ${isActive("/services/1")}`}
+                      to="/services/1"
+                      className={`sub-menu-item ${isActive("/services/1")}`}
                   >
                     Housing Navigation
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/services/2"
-                    className={`sub-menu-item ${isActive("/services/2")}`}
+                      to="/services/2"
+                      className={`sub-menu-item ${isActive("/services/2")}`}
                   >
                     Housing Retention
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/services/3"
-                    className={`sub-menu-item ${isActive("/services/3")}`}
+                      to="/services/3"
+                      className={`sub-menu-item ${isActive("/services/3")}`}
                   >
                     Rapid Rehousing and Homeless Prevention
                   </Link>
@@ -151,16 +151,24 @@ const Header: React.FC = () => {
 
             <li>
               <Link
-                to="/stories"
-                className={`sub-menu-item ${isActive("/stories")}`}
+                  to="/stories"
+                  className={`sub-menu-item ${isActive("/stories")}`}
               >
                 Stories
               </Link>
             </li>
             <li>
               <Link
-                to="/contact"
-                className={`sub-menu-item ${isActive("/contact")}`}
+                  to="/partners"
+                  className={`sub-menu-item ${isActive("/partners")}`}
+              >
+                Partners
+              </Link>
+            </li>
+            <li>
+              <Link
+                  to="/contact"
+                  className={`sub-menu-item ${isActive("/contact")}`}
               >
                 Contact
               </Link>
