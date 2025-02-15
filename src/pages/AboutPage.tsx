@@ -32,6 +32,11 @@ const team: profile[] = [
     nombre: "Deedee Teisina",
     puesto: "Housing Retention Specialist",
   },
+  {
+    imagen: unamed,
+    nombre: "Christopher Fortiz",
+    puesto: "Operations Manager",
+  },
 ];
 
 const AboutPage = () => {
