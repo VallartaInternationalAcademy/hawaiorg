@@ -17,11 +17,14 @@ const PartnersSection = ({ partners }: PartnersProps) => {
         {partners.map((item, index) => (
           <div key={index} className="col-lg-4 col-md-6 col-12 mt-4 pt-2">
             <div className="d-flex flex-column justify-content-center align-items-center">
-              <img
-                src={item.logo}
-                className="rounded-lg img-fluid"
-                alt=""
-              />
+              <div className="d-flex justify-content-center align-items-center w-75">
+                <img
+                  src={item.logo}
+                  className="rounded-lg img-fluid max-width:220px"
+                  style={{ maxWidth: "350px", maxHeight: "150px", objectFit: "contain" }}
+                  alt=""
+                />
+              </div>
               <div className="content ms-3">
                 <h5 className="mb-2 text-center">
                   <a className="text-dark">{item.name}</a>
