@@ -1,5 +1,6 @@
 import HeroPage from "../components/Hero/HeroPage";
 import partnerLogo1 from "../assets/images/hawai/partners/kids_hurt_too_hawaii.png";
+import partnerLogo2 from "../assets/images/hawai/partners/HuioHauula.png";
 import partnersImage from "../assets/images/hawai/fondo2.jpg";
 import useScrollToTop from "../hooks/useScrollToTop";
 import PartnersSection, {partner} from "../containers/PartnersSection";
@@ -7,8 +8,13 @@ import PartnersSection, {partner} from "../containers/PartnersSection";
 const partners: partner[] = [
   {
     logo: partnerLogo1,
-    name: " Kids Hurt Too Hawaii",
+    name: "Kids Hurt Too Hawaii",
     description: "Providing free support for children and youth (3-19) facing grief and trauma. Through mentorship, crisis care, and peer groups, they help families heal and rebuild.",
+  },
+  {
+    logo: partnerLogo2,
+    name: "HUI O HAU‘ULA",
+    description: "A community-driven collective uniting local businesses, organizations, and outreach programs to empower keiki, ‘ohana, and kūpuna. As a Partnership Hub, they expand access to essential services like health, education, food security, and cultural preservation.",
   },
 ];
 
@@ -18,9 +24,8 @@ const PartnersPage = () => {
     <div>
       <HeroPage
         imagen={partnersImage}
-        page="PARTNERS"
-        description='Our name, "Corazon," translates to "heart" in Spanish, reflecting the deep compassion and unwavering commitment that drives our efforts to support and uplift our community. Choosing the name "Corazon" was a deliberate and meaningful decision. It symbolizes the heart and soul we put into our work, the love and care we extend to each family we serve, and the belief that a community united by compassion can achieve great things.
-'
+        page="Stronger Together: Our Partners"
+        description='At Corazón Hawaii, we believe in the power of collaboration. By working alongside dedicated organizations, we expand our impact, providing essential resources, housing solutions, and community support.'
         Breadcrumb={[{ link: "/", nombre: "Home" }]}
       />
       <section className="section">
