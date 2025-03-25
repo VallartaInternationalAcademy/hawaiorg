@@ -29,7 +29,7 @@ const PartnersSection = ({ partners }: PartnersProps) => {
                 <h5 className="mb-2 text-center">
                   <a className="text-dark">{item.name}</a>
                 </h5>
-                <p className="position text-muted" style={{ textAlign: "justify" }}>{item.description}</p>
+                <p className="position text-muted" style={{ textAlign: "left" }}>{item.description}</p>
               </div>
             </div>
           </div>
