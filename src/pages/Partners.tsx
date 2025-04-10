@@ -10,11 +10,13 @@ const partners: partner[] = [
     logo: partnerLogo2,
     name: "HUI O HAU‘ULA",
     description: "A community-driven collective uniting local businesses, organizations, and outreach programs to empower keiki, \"ohana, and kupuna\". As a Partnership Hub, they expand access to essential services like health, education, food security, and cultural preservation.",
+    urlLink: "https://huiohauula.org/"
   },
   {
     logo: partnerLogo1,
     name: "Kids Hurt Too Hawaii",
     description: "Providing free support for children and youth (3-19) facing grief and trauma. Through mentorship, crisis care, and peer groups, they help families heal and rebuild.",
+    urlLink: "https://www.kidshurttoo.org/"
   },
 ];
 

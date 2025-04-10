@@ -37,6 +37,11 @@ const team: profile[] = [
     nombre: "Christopher Fortiz",
     puesto: "Operations Manager",
   },
+  {
+    imagen: unamed,
+    nombre: "Patricia K. Cornett",
+    puesto: "Retention Specialist",
+  },
 ];
 
 const AboutPage = () => {
