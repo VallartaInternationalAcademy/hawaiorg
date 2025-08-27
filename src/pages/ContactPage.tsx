@@ -1,5 +1,5 @@
-import { FaPhone } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
+import {FaMap, FaPhone} from "react-icons/fa";
+import { IoMail, IoMap } from "react-icons/io5";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import useEmail from "../hooks/useSendEmail";
@@ -52,7 +52,7 @@ const ContactPage = () => {
   return (
     <section className="section">
       <div className="container mt-100 mt-60">
-        <div className="row align-items-center">
+        <div className="d-block d-md-flex flex-wrap justify-content-center align-items-center">
           <div className="col-lg-6 col-md-8 pt-2 pt-sm-0 order-2 order-md-1">
             <div className="card shadow rounded border-0">
               <div className="card-body py-5">
@@ -155,8 +155,8 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="col-lg-6 col-md-6 order-1 order-md-2">
-            <div className="row">
+          <div className="col-12 col-lg-6 col-md-6 order-1 order-md-2">
+            <div className="d-block d-md-flex mt-4 justify-content-around">
               <div className="col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div className="card border-0 text-center features feature-primary feature-clean">
                   <div className="icons text-center mx-auto">
@@ -190,6 +190,43 @@ const ContactPage = () => {
                       className="read-more"
                     >
                       sdavalos@corazonhawaii.org
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="d-block d-md-flex mt-4 justify-content-around">
+              <div className="col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="card border-0 text-center features feature-primary feature-clean">
+                  <div className="icons text-center mx-auto">
+                    <IoMap className="rounded h3 mb-0" />
+                  </div>
+                  <div className="content mt-4">
+                    <h5 className="fw-bold mh-500">Family Assessment Center - Hau'ula</h5>
+                    <p className="text-muted">
+                      54-083A Hauula Homestead Rd Hauula, HI 96717
+                    </p>
+                    <a href="tel:+1-562-513-82-13" className="read-more">
+                       808-293-0939
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div className="card border-0 text-center features feature-primary feature-clean">
+                  <div className="icons text-center mx-auto">
+                    <IoMap className="rounded h3 mb-0" />
+                  </div>
+                  <div className="content mt-4">
+                    <h5 className="fw-bold">Family Assessment Center and Emergency Shelter - Honolulu</h5>
+                    <p className="text-muted">
+                      1311 Ward Ave Honolulu, HI 96814
+                    </p>
+                    <a href="tel:+1-562-513-82-13" className="read-more d-block">
+                       808-599-5759
+                    </a>
+                    <a href="tel:+1-562-513-82-13" className="read-more d-block">
+                       Fax. 808-545-1132
                     </a>
                   </div>
                 </div>
