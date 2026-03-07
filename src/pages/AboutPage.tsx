@@ -58,21 +58,21 @@ const AboutPage = () => {
       <section className="section">
         <AboutSection />
       </section>
-      <section className="section">
-        <div className="row">
-          <div className="col-12 text-center">
-            <div className="section-title mb-4 pb-2">
-              <h4 className="title">
-                MEET OUR <span className="text-primary fw-bold">TEAM</span>{" "}
-              </h4>
-            </div>
-          </div>
-        </div>
-        <TeamSection Team={team} />
-        <section className="section">
-          <StrategicSection />
-        </section>
-      </section>
+      {/*<section className="section">*/}
+      {/*  <div className="row">*/}
+      {/*    <div className="col-12 text-center">*/}
+      {/*      <div className="section-title mb-4 pb-2">*/}
+      {/*        <h4 className="title">*/}
+      {/*          MEET OUR <span className="text-primary fw-bold">TEAM</span>{" "}*/}
+      {/*        </h4>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*  <TeamSection Team={team} />*/}
+      {/*  <section className="section">*/}
+      {/*    <StrategicSection />*/}
+      {/*  </section>*/}
+      {/*</section>*/}
     </div>
   );
 };
